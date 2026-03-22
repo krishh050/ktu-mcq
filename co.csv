@@ -1,0 +1,678 @@
+semester,subject,module,course_outcome,question_text
+S1,Linear Algebra,Module 1,"Solve systems of linear equations, diagonalize matrices and characterise quadratic forms","A is a real matrix of order 3x3 and X = [x, y, z]^T. What can be said about the solution of AX = 0 if rank(A) = 1, 2, or 3?"
+S1,Linear Algebra,Module 1,"Solve systems of linear equations, diagonalize matrices and characterise quadratic forms","Given A = [[3,0,2],[0,2,0],[-2,0,0]], find an orthogonal matrix P that diagonalizes A."
+S1,Linear Algebra,Module 1,"Solve systems of linear equations, diagonalize matrices and characterise quadratic forms","Find the type of conic section represented by the quadratic form 17x1^2 - 30x1x2 + 17x2^2 = 128."
+S1,Linear Algebra,Module 1,"Solve systems of linear equations, diagonalize matrices and characterise quadratic forms","The matrix A = [[-2,2,-3],[2,1,-6],[-1,-2,0]] has eigenvalue 5 with corresponding eigenvector X = [1,2,-1]^T. Find A^5X."
+S1,Linear Algebra,Module 2,"Compute the partial and total derivatives and maxima and minima of multivariable functions","Find the slope of the surface z = x^2 y + 5y^3 in the x-direction at the point (1, -2)."
+S1,Linear Algebra,Module 2,"Compute the partial and total derivatives and maxima and minima of multivariable functions","Given w = xy + z, use chain rule to find the instantaneous rate of change of w at each point along the curve x = cos t, y = sin t, z = t."
+S1,Linear Algebra,Module 2,"Compute the partial and total derivatives and maxima and minima of multivariable functions","Determine the dimensions of a rectangular box open at the top, having volume 32 cubic ft and requiring the least amount of material for its construction."
+S1,Linear Algebra,Module 3,"Compute multiple integrals and apply them to find areas and volumes of geometrical shapes, mass and centre of gravity of plane laminas","Evaluate ∬ (x + 2y) dA where D is the region bounded by the parabolas y = 2x^2 and y = 1 + x^2."
+S1,Linear Algebra,Module 3,"Compute multiple integrals and apply them to find areas and volumes of geometrical shapes, mass and centre of gravity of plane laminas","Explain how to find the volume under the surface z = f(x, y) over a region D in the xy-plane using (i) double integral (ii) triple integral."
+S1,Linear Algebra,Module 3,"Compute multiple integrals and apply them to find areas and volumes of geometrical shapes, mass and centre of gravity of plane laminas","Find the mass and centre of gravity of a triangular lamina with vertices (0,0), (2,1), (0,3) if density function is f(x, y) = x + y."
+S1,Linear Algebra,Module 3,"Compute multiple integrals and apply them to find areas and volumes of geometrical shapes, mass and centre of gravity of plane laminas","Use spherical coordinates to evaluate ∭ (x^2 + y^2 + z^2)^3 dV where B is the unit ball defined by x^2 + y^2 + z^2 ≤ 1."
+S1,Linear Algebra,Module 4,"Perform various tests to determine whether a given series is convergent, absolutely convergent or conditionally convergent","What is the difference between a sequence and a series? When do you say that they are convergent or divergent?"
+S1,Linear Algebra,Module 4,"Perform various tests to determine whether a given series is convergent, absolutely convergent or conditionally convergent","Determine whether the series ∑ (5 / (2n^2 + 4n + 3)) from n = 1 to ∞ converges or diverges."
+S1,Linear Algebra,Module 4,"Perform various tests to determine whether a given series is convergent, absolutely convergent or conditionally convergent","Is the series ∑ ((-1)^(n-1) / n) from n = 1 to ∞ convergent? Absolutely convergent? Conditionally convergent?"
+S1,Linear Algebra,Module 5,"Determine the Taylor and Fourier series expansion of functions and learn their applications","Assuming the possibility of expansion, find the Maclaurin series of f(x) = (1 + x)^k for |x| < 1 where k is any real number. What happens if k is a positive integer?"
+S1,Linear Algebra,Module 5,"Determine the Taylor and Fourier series expansion of functions and learn their applications","Use the Maclaurin series of ln(1 + x), −1 < x ≤ 1, to find an approximate value of ln(2)."
+S1,Linear Algebra,Module 5,"Determine the Taylor and Fourier series expansion of functions and learn their applications","Find the Fourier series of the function f(x) = x^2, −2 ≤ x < 2, with f(x + 4) = f(x). Hence, using Parseval’s identity, prove that 1 + 1/2^4 + 1/3^4 + ... = π^4 / 90."
+S1,Linear Algebra,Module 5,"Determine the Taylor and Fourier series expansion of functions and learn their applications","Expand the function f(x) = x (0 < x < 1/2) into (i) Fourier sine series (ii) Fourier cosine series."
+
+
+S1,Engineering Physics,Module 1," oscillations and wave motion concepts","Explain the effect of damping force on oscillators."
+S1,Engineering Physics,Module 1," oscillations and wave motion concepts","Distinguish between transverse and longitudinal waves."
+S1,Engineering Physics,Module 1," oscillations and wave motion concepts","Derive an expression for the fundamental frequency of transverse vibration in a stretched string."
+S1,Engineering Physics,Module 1," oscillations and wave motion concepts","Calculate the fundamental frequency of a string of length 2 m weighing 6 g kept stretched by a load of 600 kg."
+
+S1,Engineering Physics,Module 2," interference and diffraction phenomena","Explain colours in thin films."
+S1,Engineering Physics,Module 2," interference and diffraction phenomena","Distinguish between Fresnel and Fraunhofer diffraction."
+S1,Engineering Physics,Module 2," interference and diffraction phenomena","Explain the formation of Newton’s rings and derive expressions for radii of bright and dark rings in reflected system. Also explain how it is used to determine wavelength of light."
+S1,Engineering Physics,Module 2," interference and diffraction phenomena","A liquid of refractive index μ is introduced between lens and glass plate. What happens to the fringe system? Justify."
+
+S1,Engineering Physics,Module 3," quantum mechanics fundamentals","Give the physical significance of wave function."
+S1,Engineering Physics,Module 3," quantum mechanics fundamentals","What are excitons?"
+S1,Engineering Physics,Module 3," quantum mechanics fundamentals","Solve Schrödinger equation for a particle in a one dimensional box and obtain energy eigen values and normalized wave functions."
+S1,Engineering Physics,Module 3," quantum mechanics fundamentals","Calculate the first three energy values of an electron in a one dimensional box of width 1 Å in electron volts."
+
+S1,Engineering Physics,Module 4," electromagnetic theory","Compare displacement current and conduction current."
+S1,Engineering Physics,Module 4," electromagnetic theory","Mention any four properties of ferromagnetic materials."
+S1,Engineering Physics,Module 4," electromagnetic theory","Starting from Maxwell’s equations, derive the free space electromagnetic wave equation and show that velocity of electromagnetic wave is 1/(μ₀ε₀)^(1/2)."
+S1,Engineering Physics,Module 4," electromagnetic theory","An electromagnetic wave is described by E = 100 exp[8πi(10^14 t – (10^6 z / 3))] V/m. Find direction of propagation, speed, and magnetic flux density."
+
+S1,Engineering Physics,Module 5," modern physics applications","Explain the working of a solar cell."
+S1,Engineering Physics,Module 5," modern physics applications","Distinguish between Type I and Type II superconductors."
+S1,Engineering Physics,Module 5," modern physics applications","Define numerical aperture and derive an expression for it."
+S1,Engineering Physics,Module 5," modern physics applications","Explain the working of intensity modulated fibre optic sensor."
+
+
+S1,Engineering Graphics,Module 1,"Draw the projection of points and lines located in different quadrants","Locate points in different quadrants as per given conditions."
+S1,Engineering Graphics,Module 1,"Draw the projection of points and lines located in different quadrants","Solve problems on lines inclined to both planes."
+S1,Engineering Graphics,Module 1,"Draw the projection of points and lines located in different quadrants","Find true length, inclinations and traces of lines."
+
+S1,Engineering Graphics,Module 2,"Prepare multiview orthographic projections of objects by visualizing them in different positions","Draw orthographic views of solids and combination solids."
+S1,Engineering Graphics,Module 2,"Prepare multiview orthographic projections of objects by visualizing them in different positions","Draw views of solids inclined to any one reference plane."
+S1,Engineering Graphics,Module 2,"Prepare multiview orthographic projections of objects by visualizing them in different positions","Draw views of solids inclined to both reference planes."
+
+S1,Engineering Graphics,Module 3,"Draw sectional views and develop surfaces of a given object","Draw views of solids sectioned by a cutting plane."
+S1,Engineering Graphics,Module 3,"Draw sectional views and develop surfaces of a given object","Find location and inclination of cutting plane given true shape of the section."
+S1,Engineering Graphics,Module 3,"Draw sectional views and develop surfaces of a given object","Draw development of lateral surface of solids and also its sectioned views."
+
+S1,Engineering Graphics,Module 4,"Prepare pictorial drawings using the principles of isometric and perspective projections to visualize objects in three dimensions","Draw isometric views or projections of solids."
+S1,Engineering Graphics,Module 4,"Prepare pictorial drawings using the principles of isometric and perspective projections to visualize objects in three dimensions","Draw isometric views or projections of combination of solids."
+S1,Engineering Graphics,Module 4,"Prepare pictorial drawings using the principles of isometric and perspective projections to visualize objects in three dimensions","Draw perspective views of solids."
+
+S1,Engineering Graphics,Module 5,"Convert 3D views to orthographic views","Draw orthographic views of solids from given three dimensional view."
+
+
+
+
+S1,Life Skills,Module 1,"Define and identify different life skills required in personal and professional life","List life skills as identified by WHO."
+S1,Life Skills,Module 1,"Define and identify different life skills required in personal and professional life","What do you mean by effective communication?"
+S1,Life Skills,Module 1,"Define and identify different life skills required in personal and professional life","What are the essential life skills required by a professional?"
+
+S1,Life Skills,Module 2,"Develop awareness of self and apply techniques to cope with emotions and stress","Identify an effective means to deal with workplace stress."
+S1,Life Skills,Module 2,"Develop awareness of self and apply techniques to cope with emotions and stress","How can a student apply journaling to stress management?"
+S1,Life Skills,Module 2,"Develop awareness of self and apply techniques to cope with emotions and stress","What is the PATH method? Describe a situation where this method can be used effectively."
+
+S1,Life Skills,Module 3,"Explain the mechanics of effective communication and demonstrate through presentations","Identify the communication network structure in the following situations: (a) group discussion on development (b) principal addressing punctuality (c) reporter interviewing a movie star (d) discussing test answers with friends."
+S1,Life Skills,Module 3,"Explain the mechanics of effective communication and demonstrate through presentations","Elucidate the importance of non-verbal communication in making a presentation."
+S1,Life Skills,Module 3,"Explain the mechanics of effective communication and demonstrate through presentations","Differentiate between kinesics, proxemics, and chronemics with examples."
+
+S1,Life Skills,Module 4,"Take part in group discussions","How can a participant conclude a group discussion effectively?"
+S1,Life Skills,Module 4,"Take part in group discussions","Listening skills are essential for effectively participating in a group discussion. Do you agree? Substantiate your answer."
+
+S1,Life Skills,Module 5,"Use appropriate thinking and problem solving techniques to solve new problems","Illustrate the creative thinking process with a suitable example."
+S1,Life Skills,Module 5,"Use appropriate thinking and problem solving techniques to solve new problems","Translate the following problem into graphical form and solve it: Ananth has 50 points more than Bimal, Chinmay has 60 points less than Ananth, and Dharini is 20 points ahead of Chinmay. Find the difference between Bimal and Dharini."
+S1,Life Skills,Module 5,"Use appropriate thinking and problem solving techniques to solve new problems","List at least five ways in which the problem 'How to increase profit?' can be redefined."
+
+
+
+S1,Engineering Mechanics,Module 1,"Recall principles and theorems related to rigid body mechanics","Explain D’Alembert’s principle."
+S1,Engineering Mechanics,Module 1,"Recall principles and theorems related to rigid body mechanics","Distinguish between static and dynamic friction."
+S1,Engineering Mechanics,Module 1,"Recall principles and theorems related to rigid body mechanics","State and explain the perpendicular axis theorem."
+
+S1,Engineering Mechanics,Module 2,"Identify and describe the components of system of forces acting on a rigid body","A simply supported beam AB of span 5 m carries point loads 5 kN, 3 kN and 2 kN at 1 m, 3 m and 4 m from support A. Calculate the support reaction at B."
+S1,Engineering Mechanics,Module 2,"Identify and describe the components of system of forces acting on a rigid body","A gymnast holding onto a bar is suspended motionless in mid-air. The bar is supported by two ropes attached to the ceiling. Diagram the forces acting on the system."
+S1,Engineering Mechanics,Module 2,"Identify and describe the components of system of forces acting on a rigid body","While riding a bike around a circular path, illustrate the forces acting on the bike to keep it moving along the circular arc."
+
+S1,Engineering Mechanics,Module 3,"Apply the conditions of equilibrium to various practical problems involving different force systems","Explain the conditions of equilibrium for a rigid body."
+S1,Engineering Mechanics,Module 3,"Apply the conditions of equilibrium to various practical problems involving different force systems","Apply equilibrium conditions to solve problems involving coplanar force systems."
+
+S1,Engineering Mechanics,Module 4,"Choose appropriate theorems, principles or formulae to solve problems of mechanics","Select suitable theorems and principles to solve mechanics problems."
+S1,Engineering Mechanics,Module 4,"Choose appropriate theorems, principles or formulae to solve problems of mechanics","Apply appropriate formulae to solve problems in rigid body mechanics."
+
+S1,Engineering Mechanics,Module 5,"Solve problems involving rigid bodies using properties of distributed areas and masses","Explain the concept of centroid of an area."
+S1,Engineering Mechanics,Module 5,"Solve problems involving rigid bodies using properties of distributed areas and masses","Solve problems involving centre of gravity and moment of inertia."
+
+
+S1,Basic Civil & Mechanical Engineering,Module 1,"Recall the role of civil engineer in society and relate various disciplines of civil engineering","Explain the relevance of civil engineering in the overall infrastructural development of the country."
+
+S1,Basic Civil & Mechanical Engineering,Module 2,"Explain different types of buildings, components, materials and construction","Discuss the difference between plinth area and carpet area."
+
+S1,Basic Civil & Mechanical Engineering,Module 3,"Describe the importance, objectives and principles of surveying","Explain the importance of surveying in civil engineering."
+
+S1,Basic Civil & Mechanical Engineering,Module 4,"Summarise basic infrastructure services like MEP, HVAC, elevators, escalators and ramps","Explain the civil engineering aspects of elevators, escalators and ramps in buildings."
+
+S1,Basic Civil & Mechanical Engineering,Module 5,"Discuss materials, energy systems, water management and environment for green buildings","Discuss the relevance of green buildings in society."
+
+S1,Basic Civil & Mechanical Engineering,Module 6,"Analyse thermodynamic cycles and calculate efficiency","In an air standard Otto cycle with compression ratio 7, initial condition 35°C and 0.1 MPa, and maximum temperature 1100°C, find heat supplied, work done and efficiency. (Cp = 1.005 kJ/kgK, Cv = 0.718 kJ/kgK)"
+S1,Basic Civil & Mechanical Engineering,Module 6,"Analyse thermodynamic cycles and calculate efficiency","A Carnot cycle has adiabatic compression ratio 5 and isothermal expansion ratio 2. Given maximum temperature 550 K and pressure 21 bar, find minimum temperature and efficiency."
+S1,Basic Civil & Mechanical Engineering,Module 6,"Analyse thermodynamic cycles and calculate efficiency","In an ideal diesel cycle, given temperatures at compression and expansion stages, determine the efficiency of the cycle."
+S1,Basic Civil & Mechanical Engineering,Module 6,"Analyse thermodynamic cycles and calculate efficiency","Explain the concepts of CRDI and MPFI in IC engines."
+
+S1,Basic Civil & Mechanical Engineering,Module 7,"Illustrate the working and features of IC engines","Explain the working of a 4-stroke SI engine with a neat sketch."
+S1,Basic Civil & Mechanical Engineering,Module 7,"Illustrate the working and features of IC engines","Compare the working of 2-stroke and 4-stroke IC engines."
+S1,Basic Civil & Mechanical Engineering,Module 7,"Illustrate the working and features of IC engines","Explain the classification of IC engines."
+
+S1,Basic Civil & Mechanical Engineering,Module 8,"Explain principles of refrigeration and air conditioning","Explain the working of a vapour compression refrigeration system."
+S1,Basic Civil & Mechanical Engineering,Module 8,"Explain principles of refrigeration and air conditioning","Explain the working of a split air conditioner with a sketch."
+S1,Basic Civil & Mechanical Engineering,Module 8,"Explain principles of refrigeration and air conditioning","Define COP, specific humidity, relative humidity and dew point temperature."
+
+S1,Basic Civil & Mechanical Engineering,Module 9,"Describe the working of hydraulic machines","Explain the working of a single stage centrifugal pump with sketches."
+S1,Basic Civil & Mechanical Engineering,Module 9,"Describe the working of hydraulic machines","Explain the working of a reciprocating pump with a neat sketch."
+S1,Basic Civil & Mechanical Engineering,Module 9,"Describe the working of hydraulic machines","A turbine operates under a head of 25 m at 200 rpm with discharge 9 m³/s and efficiency 90%. Determine the power developed."
+
+S1,Basic Civil & Mechanical Engineering,Module 10,"Explain the working of power transmission elements","Explain the working of belt drive and gear drive with neat sketches."
+S1,Basic Civil & Mechanical Engineering,Module 10,"Explain the working of power transmission elements","Explain a single plate clutch."
+S1,Basic Civil & Mechanical Engineering,Module 10,"Explain the working of power transmission elements","Sketch different types of gear trains and explain."
+
+S1,Basic Civil & Mechanical Engineering,Module 11,"Describe manufacturing, metal joining and machining processes","Describe operations performed using a drilling machine."
+S1,Basic Civil & Mechanical Engineering,Module 11,"Describe manufacturing, metal joining and machining processes","Explain the functions of runners and risers in casting."
+S1,Basic Civil & Mechanical Engineering,Module 11,"Describe manufacturing, metal joining and machining processes","Explain the working and parts of a lathe with a neat sketch."
+
+
+S1,Basic Electrical & Electronics Engineering,Module 1,"Apply fundamental concepts and circuit laws to solve simple DC electric circuits","Solve problems based on current division rule."
+S1,Basic Electrical & Electronics Engineering,Module 1,"Apply fundamental concepts and circuit laws to solve simple DC electric circuits","Solve problems using mesh and nodal analysis."
+S1,Basic Electrical & Electronics Engineering,Module 1,"Apply fundamental concepts and circuit laws to solve simple DC electric circuits","Solve problems on Wye-Delta transformation."
+
+S1,Basic Electrical & Electronics Engineering,Module 2,"Develop and solve models of magnetic circuits","Solve problems on series magnetic circuits."
+S1,Basic Electrical & Electronics Engineering,Module 2,"Develop and solve models of magnetic circuits","Solve problems on parallel magnetic circuits."
+S1,Basic Electrical & Electronics Engineering,Module 2,"Develop and solve models of magnetic circuits","Solve problems on composite magnetic circuits."
+
+S1,Basic Electrical & Electronics Engineering,Module 3,"Apply fundamental laws to solve AC circuits in steady state","Solve problems on self inductance, mutual inductance and coefficient of coupling."
+S1,Basic Electrical & Electronics Engineering,Module 3,"Apply fundamental laws to solve AC circuits in steady state","Solve problems on RMS and average values of periodic waveforms."
+S1,Basic Electrical & Electronics Engineering,Module 3,"Apply fundamental laws to solve AC circuits in steady state","Solve problems on series AC circuits."
+S1,Basic Electrical & Electronics Engineering,Module 3,"Apply fundamental laws to solve AC circuits in steady state","Compare star and delta connected three phase AC systems."
+
+S1,Basic Electrical & Electronics Engineering,Module 4,"Describe the working of a voltage amplifier","Explain the need for voltage divider biasing in an RC coupled amplifier."
+S1,Basic Electrical & Electronics Engineering,Module 4,"Describe the working of a voltage amplifier","Define operating point in the context of a BJT amplifier."
+S1,Basic Electrical & Electronics Engineering,Module 4,"Describe the working of a voltage amplifier","Explain the need for a voltage amplifier in a public address system."
+
+S1,Basic Electrical & Electronics Engineering,Module 5,"Outline the principle of an electronic instrumentation system","Draw the block diagram of an electronic instrumentation system."
+S1,Basic Electrical & Electronics Engineering,Module 5,"Outline the principle of an electronic instrumentation system","What is a transducer?"
+S1,Basic Electrical & Electronics Engineering,Module 5,"Outline the principle of an electronic instrumentation system","Explain the working principle of a digital multimeter."
+
+S1,Basic Electrical & Electronics Engineering,Module 6,"Explain the principle of radio and cellular communication","Explain the working principle of an antenna used in a radio transmitter."
+S1,Basic Electrical & Electronics Engineering,Module 6,"Explain the principle of radio and cellular communication","Explain the need for RF and IF sections in a superheterodyne receiver."
+S1,Basic Electrical & Electronics Engineering,Module 6,"Explain the principle of radio and cellular communication","What is meant by a cell in cellular communication?"
+
+
+S2,Vector Calculus & Differential Equations,Module 1,"Compute derivatives and line integrals of vector functions and their applications","How do you calculate speed, velocity and acceleration of a particle whose position vector is r(t)?"
+S2,Vector Calculus & Differential Equations,Module 1,"Compute derivatives and line integrals of vector functions and their applications","Find the work done by the force field F = (e^x − y^3)i + (cos y + x^3)j around the unit circle."
+S2,Vector Calculus & Differential Equations,Module 1,"Compute derivatives and line integrals of vector functions and their applications","When is a vector field conservative? What are its implications?"
+
+S2,Vector Calculus & Differential Equations,Module 2,"Evaluate surface and volume integrals and their applications","Write one application each of line integral, double integral and surface integral."
+S2,Vector Calculus & Differential Equations,Module 2,"Evaluate surface and volume integrals and their applications","Use divergence theorem to find outward flux of F(x,y,z) = zk across the sphere x^2 + y^2 + z^2 = a^2."
+S2,Vector Calculus & Differential Equations,Module 2,"Evaluate surface and volume integrals and their applications","State Green’s theorem and use it to express area as a line integral."
+
+S2,Vector Calculus & Differential Equations,Module 3,"Solve homogeneous and non-homogeneous linear differential equations with constant coefficients","If y1(x) and y2(x) are solutions of y'' + py' + qy = 0, show that y1 + y2 is also a solution."
+S2,Vector Calculus & Differential Equations,Module 3,"Solve homogeneous and non-homogeneous linear differential equations with constant coefficients","Solve the differential equation y'' + y = 0.001x^2 using method of undetermined coefficients."
+S2,Vector Calculus & Differential Equations,Module 3,"Solve homogeneous and non-homogeneous linear differential equations with constant coefficients","Solve the differential equation y''' − 3y'' + 3y' − y = e^x − x − 1."
+
+S2,Vector Calculus & Differential Equations,Module 4,"Compute Laplace transforms and apply them to solve ODEs","Find the inverse Laplace transform of (3s − 13)/(s^2 + 2s + 4)."
+S2,Vector Calculus & Differential Equations,Module 4,"Compute Laplace transforms and apply them to solve ODEs","Find the Laplace transform of unit step function."
+S2,Vector Calculus & Differential Equations,Module 4,"Compute Laplace transforms and apply them to solve ODEs","Solve y'' + 9y = δ(t − π/2), given y(0)=2 and y'(0)=0."
+
+S2,Vector Calculus & Differential Equations,Module 5,"Determine Fourier transforms and apply them in engineering","Find Fourier integral representation of f(x) = e^{-x} for x > 0 and 0 for x < 0."
+S2,Vector Calculus & Differential Equations,Module 5,"Determine Fourier transforms and apply them in engineering","State conditions for existence of Fourier transform."
+S2,Vector Calculus & Differential Equations,Module 5,"Determine Fourier transforms and apply them in engineering","Find Fourier transform of f(x) = 1 for |x| < 1 and 0 otherwise."
+
+
+S2,Professional Communication,Module 1,"Develop vocabulary and language skills relevant to engineering profession","Explain the importance of vocabulary in engineering communication."
+S2,Professional Communication,Module 1,"Develop vocabulary and language skills relevant to engineering profession","List techniques to improve technical vocabulary."
+S2,Professional Communication,Module 1,"Develop vocabulary and language skills relevant to engineering profession","How can language skills enhance professional communication?"
+
+S2,Professional Communication,Module 2,"Analyze, interpret and summarize textual content","Explain methods to analyze and interpret technical texts."
+S2,Professional Communication,Module 2,"Analyze, interpret and summarize textual content","What are the key steps in summarizing a passage?"
+S2,Professional Communication,Module 2,"Analyze, interpret and summarize textual content","Summarize a given technical paragraph effectively."
+
+S2,Professional Communication,Module 3,"Create effective technical presentations","What are the essential elements of a good technical presentation?"
+S2,Professional Communication,Module 3,"Create effective technical presentations","Explain the role of visual aids in presentations."
+S2,Professional Communication,Module 3,"Create effective technical presentations","How do you structure a technical presentation?"
+
+S2,Professional Communication,Module 4,"Discuss topics in group and arrive at consensus","Explain the rules of effective group discussion."
+S2,Professional Communication,Module 4,"Discuss topics in group and arrive at consensus","How can a participant contribute effectively in a group discussion?"
+S2,Professional Communication,Module 4,"Discuss topics in group and arrive at consensus","What strategies help in reaching consensus in group discussions?"
+
+S2,Professional Communication,Module 5,"Identify drawbacks in listening and apply techniques","What are common barriers to effective listening?"
+S2,Professional Communication,Module 5,"Identify drawbacks in listening and apply techniques","Explain techniques to improve listening skills."
+S2,Professional Communication,Module 5,"Identify drawbacks in listening and apply techniques","How can active listening improve communication?"
+
+
+
+S3,Discrete Mathematical Structures,Module 1,"Apply logic and proof techniques in discrete mathematics","Define propositions and logical connectives with examples."
+S3,Discrete Mathematical Structures,Module 1,"Apply logic and proof techniques in discrete mathematics","Explain tautology, contradiction and contingency."
+S3,Discrete Mathematical Structures,Module 1,"Apply logic and proof techniques in discrete mathematics","Prove a statement using mathematical induction."
+
+S3,Discrete Mathematical Structures,Module 2,"Understand sets, relations and functions","Define set operations with examples."
+S3,Discrete Mathematical Structures,Module 2,"Understand sets, relations and functions","Explain types of relations with examples."
+S3,Discrete Mathematical Structures,Module 2,"Understand sets, relations and functions","Define function and explain types of functions."
+
+S3,Discrete Mathematical Structures,Module 3,"Analyze algebraic structures","Define group and give examples."
+S3,Discrete Mathematical Structures,Module 3,"Analyze algebraic structures","Explain properties of a group."
+S3,Discrete Mathematical Structures,Module 3,"Analyze algebraic structures","Define ring and field with examples."
+
+S3,Discrete Mathematical Structures,Module 4,"Apply graph theory concepts","Define graph and its types."
+S3,Discrete Mathematical Structures,Module 4,"Apply graph theory concepts","Explain Euler and Hamiltonian graphs."
+S3,Discrete Mathematical Structures,Module 4,"Apply graph theory concepts","Define tree and its properties."
+
+S3,Discrete Mathematical Structures,Module 5,"Solve recurrence relations and counting problems","Define recurrence relation with examples."
+S3,Discrete Mathematical Structures,Module 5,"Solve recurrence relations and counting problems","Solve recurrence relation using substitution method."
+S3,Discrete Mathematical Structures,Module 5,"Solve recurrence relations and counting problems","Explain pigeonhole principle with example."
+
+
+S3,Data Structures,Module 1,"Analyze algorithm complexity and basic data structures","Define time and space complexity."
+S3,Data Structures,Module 1,"Analyze algorithm complexity and basic data structures","Explain Big-O notation with examples."
+S3,Data Structures,Module 1,"Analyze algorithm complexity and basic data structures","Compare linear search and binary search."
+
+S3,Data Structures,Module 2,"Implement linear data structures like stacks and queues","Define stack and its operations."
+S3,Data Structures,Module 2,"Implement linear data structures like stacks and queues","Explain applications of stack."
+S3,Data Structures,Module 2,"Implement linear data structures like stacks and queues","Define queue and its types."
+
+S3,Data Structures,Module 3,"Implement linked lists and their applications","Define linked list and its types."
+S3,Data Structures,Module 3,"Implement linked lists and their applications","Explain insertion and deletion in linked list."
+S3,Data Structures,Module 3,"Implement linked lists and their applications","Differentiate between singly and doubly linked list."
+
+S3,Data Structures,Module 4,"Apply tree data structures","Define binary tree and its properties."
+S3,Data Structures,Module 4,"Apply tree data structures","Explain tree traversal techniques."
+S3,Data Structures,Module 4,"Apply tree data structures","Define binary search tree and its operations."
+
+S3,Data Structures,Module 5,"Analyze graph and hashing techniques","Define graph and its representation."
+S3,Data Structures,Module 5,"Analyze graph and hashing techniques","Explain BFS and DFS traversal."
+S3,Data Structures,Module 5,"Analyze graph and hashing techniques","Define hashing and collision resolution techniques."
+
+
+
+S3,Logic System Design,Module 1,"Apply Boolean algebra and logic simplification techniques","Define Boolean algebra and its basic laws."
+S3,Logic System Design,Module 1,"Apply Boolean algebra and logic simplification techniques","Simplify Boolean expressions using laws and theorems."
+S3,Logic System Design,Module 1,"Apply Boolean algebra and logic simplification techniques","Explain De Morgan’s theorems with examples."
+
+S3,Logic System Design,Module 2,"Design combinational logic circuits","Explain logic gates and their functions."
+S3,Logic System Design,Module 2,"Design combinational logic circuits","Design a half adder and full adder."
+S3,Logic System Design,Module 2,"Design combinational logic circuits","Explain multiplexer and demultiplexer."
+
+S3,Logic System Design,Module 3,"Apply minimization techniques for logic circuits","Explain Karnaugh map and its use."
+S3,Logic System Design,Module 3,"Apply minimization techniques for logic circuits","Simplify Boolean expressions using K-map."
+S3,Logic System Design,Module 3,"Apply minimization techniques for logic circuits","Explain Quine-McCluskey method."
+
+S3,Logic System Design,Module 4,"Design sequential circuits","Define flip-flops and types."
+S3,Logic System Design,Module 4,"Design sequential circuits","Explain JK and D flip-flops."
+S3,Logic System Design,Module 4,"Design sequential circuits","Explain counters and registers."
+
+S3,Logic System Design,Module 5,"Analyze synchronous and asynchronous circuits","Explain synchronous and asynchronous sequential circuits."
+S3,Logic System Design,Module 5,"Analyze synchronous and asynchronous circuits","Define state diagram and state table."
+S3,Logic System Design,Module 5,"Analyze synchronous and asynchronous circuits","Explain race conditions and hazards."
+
+
+S3,Object Oriented Programming (Java),Module 1,"Understand basics of Java and OOP concepts","Define object oriented programming and its features."
+S3,Object Oriented Programming (Java),Module 1,"Understand basics of Java and OOP concepts","Explain structure of a Java program."
+S3,Object Oriented Programming (Java),Module 1,"Understand basics of Java and OOP concepts","What is JVM? Explain its role."
+
+S3,Object Oriented Programming (Java),Module 2,"Apply classes and objects in Java","Define class and object with example."
+S3,Object Oriented Programming (Java),Module 2,"Apply classes and objects in Java","Explain constructors in Java."
+S3,Object Oriented Programming (Java),Module 2,"Apply classes and objects in Java","Explain method overloading."
+
+S3,Object Oriented Programming (Java),Module 3,"Implement inheritance and polymorphism","Explain inheritance and its types."
+S3,Object Oriented Programming (Java),Module 3,"Implement inheritance and polymorphism","Differentiate method overloading and overriding."
+S3,Object Oriented Programming (Java),Module 3,"Implement inheritance and polymorphism","Explain polymorphism with example."
+
+S3,Object Oriented Programming (Java),Module 4,"Apply exception handling and packages","What is exception handling in Java?"
+S3,Object Oriented Programming (Java),Module 4,"Apply exception handling and packages","Explain try-catch block with example."
+S3,Object Oriented Programming (Java),Module 4,"Apply exception handling and packages","Explain packages in Java."
+
+S3,Object Oriented Programming (Java),Module 5,"Apply file handling and advanced Java concepts","Explain file handling in Java."
+S3,Object Oriented Programming (Java),Module 5,"Apply file handling and advanced Java concepts","Explain multithreading in Java."
+S3,Object Oriented Programming (Java),Module 5,"Apply file handling and advanced Java concepts","Explain Java I/O streams."
+
+S3,Sustainable Engineering,Module 1,"Understand principles of sustainability","Define sustainable development."
+S3,Sustainable Engineering,Module 1,"Understand principles of sustainability","Explain the need for sustainable engineering."
+S3,Sustainable Engineering,Module 1,"Understand principles of sustainability","What are the pillars of sustainability?"
+
+S3,Sustainable Engineering,Module 2,"Analyze environmental impacts and resources","Explain environmental impact assessment."
+S3,Sustainable Engineering,Module 2,"Analyze environmental impacts and resources","Discuss renewable and non-renewable resources."
+S3,Sustainable Engineering,Module 2,"Analyze environmental impacts and resources","Explain carbon footprint and its reduction."
+
+S3,Sustainable Engineering,Module 3,"Apply sustainable practices in engineering","Explain waste management techniques."
+S3,Sustainable Engineering,Module 3,"Apply sustainable practices in engineering","Discuss water conservation methods."
+S3,Sustainable Engineering,Module 3,"Apply sustainable practices in engineering","Explain energy efficient technologies."
+
+S3,Sustainable Engineering,Module 4,"Understand green building and sustainable design","What is a green building?"
+S3,Sustainable Engineering,Module 4,"Understand green building and sustainable design","Explain features of sustainable buildings."
+S3,Sustainable Engineering,Module 4,"Understand green building and sustainable design","Discuss benefits of green buildings."
+
+S3,Sustainable Engineering,Module 5,"Evaluate sustainability in real-world applications","Explain life cycle assessment."
+S3,Sustainable Engineering,Module 5,"Evaluate sustainability in real-world applications","Discuss sustainable transportation."
+S3,Sustainable Engineering,Module 5,"Evaluate sustainability in real-world applications","Explain role of engineers in sustainable development."
+
+
+S4,Computer Organisation & Architecture,Module 1,"Understand basic structure and operation of computer systems","Explain the basic organization of a computer system."
+S4,Computer Organisation & Architecture,Module 1,"Understand basic structure and operation of computer systems","Describe instruction cycle with diagram."
+S4,Computer Organisation & Architecture,Module 1,"Understand basic structure and operation of computer systems","Explain different addressing modes."
+
+S4,Computer Organisation & Architecture,Module 2,"Analyze arithmetic and logic unit operations","Explain addition and subtraction using 2’s complement."
+S4,Computer Organisation & Architecture,Module 2,"Analyze arithmetic and logic unit operations","Describe Booth’s algorithm for multiplication."
+S4,Computer Organisation & Architecture,Module 2,"Analyze arithmetic and logic unit operations","Explain floating point representation."
+
+S4,Computer Organisation & Architecture,Module 3,"Understand memory organization and hierarchy","Explain memory hierarchy."
+S4,Computer Organisation & Architecture,Module 3,"Understand memory organization and hierarchy","Describe cache memory and mapping techniques."
+S4,Computer Organisation & Architecture,Module 3,"Understand memory organization and hierarchy","Explain virtual memory."
+
+S4,Computer Organisation & Architecture,Module 4,"Analyze input-output organization","Explain programmed I/O and interrupt-driven I/O."
+S4,Computer Organisation & Architecture,Module 4,"Analyze input-output organization","Describe DMA (Direct Memory Access)."
+S4,Computer Organisation & Architecture,Module 4,"Analyze input-output organization","Explain I/O interfaces."
+
+S4,Computer Organisation & Architecture,Module 5,"Understand pipeline and parallel processing","Explain instruction pipelining."
+S4,Computer Organisation & Architecture,Module 5,"Understand pipeline and parallel processing","Describe hazards in pipelining."
+S4,Computer Organisation & Architecture,Module 5,"Understand pipeline and parallel processing","Explain parallel processing concepts."
+
+
+S4,Graph Theory,Module 1,"Understand basic concepts of graphs","Define graph and its types."
+S4,Graph Theory,Module 1,"Understand basic concepts of graphs","Explain degree of a vertex and handshaking lemma."
+S4,Graph Theory,Module 1,"Understand basic concepts of graphs","Define subgraph and spanning subgraph."
+
+S4,Graph Theory,Module 2,"Analyze paths, circuits and connectedness","Define path, circuit and connected graph."
+S4,Graph Theory,Module 2,"Analyze paths, circuits and connectedness","Explain Euler graph and Hamiltonian graph."
+S4,Graph Theory,Module 2,"Analyze paths, circuits and connectedness","State and explain Euler’s theorem."
+
+S4,Graph Theory,Module 3,"Apply tree concepts in graphs","Define tree and its properties."
+S4,Graph Theory,Module 3,"Apply tree concepts in graphs","Explain spanning tree and minimum spanning tree."
+S4,Graph Theory,Module 3,"Apply tree concepts in graphs","Describe Prim’s and Kruskal’s algorithms."
+
+S4,Graph Theory,Module 4,"Analyze graph coloring and planarity","Explain graph coloring and chromatic number."
+S4,Graph Theory,Module 4,"Analyze graph coloring and planarity","Define planar graph and Kuratowski’s theorem."
+S4,Graph Theory,Module 4,"Analyze graph coloring and planarity","Explain applications of graph coloring."
+
+S4,Graph Theory,Module 5,"Apply graph algorithms","Explain shortest path algorithms."
+S4,Graph Theory,Module 5,"Apply graph algorithms","Describe Dijkstra’s algorithm."
+S4,Graph Theory,Module 5,"Apply graph algorithms","Explain Floyd-Warshall algorithm."
+
+
+S4,Database Management Systems,Module 1,"Understand database concepts and data models","Define database and DBMS."
+S4,Database Management Systems,Module 1,"Understand database concepts and data models","Explain advantages of DBMS over file systems."
+S4,Database Management Systems,Module 1,"Understand database concepts and data models","Describe different data models."
+
+S4,Database Management Systems,Module 2,"Design relational database schemas","Define relational model and its components."
+S4,Database Management Systems,Module 2,"Design relational database schemas","Explain keys in relational database."
+S4,Database Management Systems,Module 2,"Design relational database schemas","Describe normalization and its types."
+
+S4,Database Management Systems,Module 3,"Apply SQL for database operations","Write SQL queries for selection and projection."
+S4,Database Management Systems,Module 3,"Apply SQL for database operations","Explain joins in SQL with examples."
+S4,Database Management Systems,Module 3,"Apply SQL for database operations","Explain aggregate functions in SQL."
+
+S4,Database Management Systems,Module 4,"Understand transaction management","Define transaction and its properties (ACID)."
+S4,Database Management Systems,Module 4,"Understand transaction management","Explain concurrency control."
+S4,Database Management Systems,Module 4,"Understand transaction management","Describe deadlock and its handling."
+
+S4,Database Management Systems,Module 5,"Analyze storage and indexing techniques","Explain file organization techniques."
+S4,Database Management Systems,Module 5,"Analyze storage and indexing techniques","Describe indexing methods."
+S4,Database Management Systems,Module 5,"Analyze storage and indexing techniques","Explain B+ tree index."
+
+
+S4,Operating Systems,Module 1,"Understand basic concepts and structure of operating systems","Define operating system and its functions."
+S4,Operating Systems,Module 1,"Understand basic concepts and structure of operating systems","Explain different types of operating systems."
+S4,Operating Systems,Module 1,"Understand basic concepts and structure of operating systems","Describe system calls."
+
+S4,Operating Systems,Module 2,"Analyze process management and scheduling","Define process and process states."
+S4,Operating Systems,Module 2,"Analyze process management and scheduling","Explain process scheduling algorithms."
+S4,Operating Systems,Module 2,"Analyze process management and scheduling","Describe inter-process communication."
+
+S4,Operating Systems,Module 3,"Understand synchronization and deadlocks","Explain critical section problem."
+S4,Operating Systems,Module 3,"Understand synchronization and deadlocks","Describe semaphores and their use."
+S4,Operating Systems,Module 3,"Understand synchronization and deadlocks","Explain deadlock conditions and prevention."
+
+S4,Operating Systems,Module 4,"Analyze memory management techniques","Explain paging and segmentation."
+S4,Operating Systems,Module 4,"Analyze memory management techniques","Describe virtual memory."
+S4,Operating Systems,Module 4,"Analyze memory management techniques","Explain page replacement algorithms."
+
+S4,Operating Systems,Module 5,"Understand file systems and I/O management","Define file system and its structure."
+S4,Operating Systems,Module 5,"Understand file systems and I/O management","Explain disk scheduling algorithms."
+S4,Operating Systems,Module 5,"Understand file systems and I/O management","Describe I/O management."
+
+S4,Constitution of India,Module 1,"Understand the historical background and features of Indian Constitution","Explain the historical background of the Indian Constitution."
+S4,Constitution of India,Module 1,"Understand the historical background and features of Indian Constitution","List the salient features of the Indian Constitution."
+S4,Constitution of India,Module 1,"Understand the historical background and features of Indian Constitution","Explain the Preamble of the Indian Constitution."
+
+S4,Constitution of India,Module 2,"Understand fundamental rights and duties","Explain fundamental rights with examples."
+S4,Constitution of India,Module 2,"Understand fundamental rights and duties","Discuss fundamental duties of citizens."
+S4,Constitution of India,Module 2,"Understand fundamental rights and duties","Explain Directive Principles of State Policy."
+
+S4,Constitution of India,Module 3,"Understand structure of government","Explain the structure of Parliament."
+S4,Constitution of India,Module 3,"Understand structure of government","Describe powers of the President of India."
+S4,Constitution of India,Module 3,"Understand structure of government","Explain the role of Prime Minister and Council of Ministers."
+
+S4,Constitution of India,Module 4,"Understand judiciary system","Explain the structure of Indian judiciary."
+S4,Constitution of India,Module 4,"Understand judiciary system","Describe powers of Supreme Court."
+S4,Constitution of India,Module 4,"Understand judiciary system","Explain judicial review."
+
+S4,Constitution of India,Module 5,"Understand federal system and governance","Explain centre-state relations."
+S4,Constitution of India,Module 5,"Understand federal system and governance","Describe emergency provisions in the Constitution."
+S4,Constitution of India,Module 5,"Understand federal system and governance","Explain amendment procedure of the Constitution."
+
+
+S5,Computer Networks,Module 1,"Explain features of computer networks, protocols and design models","Define computer network and list its features."
+S5,Computer Networks,Module 1,"Explain features of computer networks, protocols and design models","What is a protocol? Explain its elements."
+S5,Computer Networks,Module 1,"Explain features of computer networks, protocols and design models","Compare OSI and TCP/IP models."
+
+S5,Computer Networks,Module 2,"Describe characteristics of physical layer and its usage","Explain functions of physical layer."
+S5,Computer Networks,Module 2,"Describe characteristics of physical layer and its usage","Describe different transmission media."
+S5,Computer Networks,Module 2,"Describe characteristics of physical layer and its usage","Explain signal encoding techniques."
+
+S5,Computer Networks,Module 3,"Explain data link layer design issues and protocols","Explain design issues of data link layer."
+S5,Computer Networks,Module 3,"Explain data link layer design issues and protocols","Describe error detection and correction methods."
+S5,Computer Networks,Module 3,"Explain data link layer design issues and protocols","Explain working of bridges and switches."
+
+S5,Computer Networks,Module 4,"Illustrate wired and wireless LAN protocols","Explain IEEE 802.3 protocol."
+S5,Computer Networks,Module 4,"Illustrate wired and wireless LAN protocols","Explain IEEE 802.11 protocol."
+S5,Computer Networks,Module 4,"Illustrate wired and wireless LAN protocols","Compare wired and wireless LANs."
+
+S5,Computer Networks,Module 5,"Select routing algorithms and congestion control techniques","Explain different routing algorithms."
+S5,Computer Networks,Module 5,"Select routing algorithms and congestion control techniques","Describe congestion control techniques."
+S5,Computer Networks,Module 5,"Select routing algorithms and congestion control techniques","Explain Quality of Service (QoS) requirements."
+
+
+
+S5,System Software,Module 1,"Distinguish software into system and application categories","Define system software and application software."
+S5,System Software,Module 1,"Distinguish software into system and application categories","Differentiate between system software and application software."
+S5,System Software,Module 1,"Distinguish software into system and application categories","Give examples of system software and application software."
+
+S5,System Software,Module 2,"Identify standard and extended architectural features of machines","Explain basic computer architecture."
+S5,System Software,Module 2,"Identify standard and extended architectural features of machines","Describe standard architectural features of a machine."
+S5,System Software,Module 2,"Identify standard and extended architectural features of machines","Explain extended architectural features of machines."
+
+S5,System Software,Module 3,"Identify machine dependent features of system software","Explain machine dependent features in system software."
+S5,System Software,Module 3,"Identify machine dependent features of system software","Describe instruction formats and addressing modes."
+S5,System Software,Module 3,"Identify machine dependent features of system software","Explain role of machine dependent code in system software."
+
+S5,System Software,Module 4,"Identify machine independent features of system software","Explain machine independent features in system software."
+S5,System Software,Module 4,"Identify machine independent features of system software","Describe symbolic addressing and relocation."
+S5,System Software,Module 4,"Identify machine independent features of system software","Explain program linking and loading."
+
+S5,System Software,Module 5,"Design algorithms for system software and analyze data structures","Explain algorithms used in assemblers."
+S5,System Software,Module 5,"Design algorithms for system software and analyze data structures","Describe data structures used in compilers."
+S5,System Software,Module 5,"Design algorithms for system software and analyze data structures","Analyze the effect of data structures in system software design."
+
+
+
+S5,Management of Software Systems,Module 1,"Demonstrate traditional and agile software development approaches","Explain traditional software development models."
+S5,Management of Software Systems,Module 1,"Demonstrate traditional and agile software development approaches","Explain Agile methodology and its principles."
+S5,Management of Software Systems,Module 1,"Demonstrate traditional and agile software development approaches","Compare traditional and Agile approaches."
+
+S5,Management of Software Systems,Module 2,"Prepare SRS and software design for a given problem","What is Software Requirement Specification (SRS)?"
+S5,Management of Software Systems,Module 2,"Prepare SRS and software design for a given problem","Explain steps in software design."
+S5,Management of Software Systems,Module 2,"Prepare SRS and software design for a given problem","Prepare an SRS for a simple system."
+
+S5,Management of Software Systems,Module 3,"Understand design patterns, licensing and project strategies","Explain design patterns with examples."
+S5,Management of Software Systems,Module 3,"Understand design patterns, licensing and project strategies","Discuss different software licensing types."
+S5,Management of Software Systems,Module 3,"Understand design patterns, licensing and project strategies","Explain testing, maintenance and DevOps strategies."
+
+S5,Management of Software Systems,Module 4,"Apply project management concepts in software development","Explain project planning and scheduling."
+S5,Management of Software Systems,Module 4,"Apply project management concepts in software development","Describe estimation techniques in software projects."
+S5,Management of Software Systems,Module 4,"Apply project management concepts in software development","Explain change management in software projects."
+
+S5,Management of Software Systems,Module 5,"Utilize SQA practices and modern software technologies","Explain Software Quality Assurance (SQA)."
+S5,Management of Software Systems,Module 5,"Utilize SQA practices and modern software technologies","Describe process improvement techniques."
+S5,Management of Software Systems,Module 5,"Utilize SQA practices and modern software technologies","Explain cloud computing, containers and microservices."
+
+
+S5,Disaster Management,Module 1,"Define disaster management terminologies and relate them to disaster cycle","Define disaster and disaster management."
+S5,Disaster Management,Module 1,"Define disaster management terminologies and relate them to disaster cycle","Explain disaster management cycle."
+S5,Disaster Management,Module 1,"Define disaster management terminologies and relate them to disaster cycle","Describe key terminologies used in disaster management."
+
+S5,Disaster Management,Module 2,"Distinguish hazard types and vulnerability assessment","Classify different types of hazards."
+S5,Disaster Management,Module 2,"Distinguish hazard types and vulnerability assessment","Explain different types of vulnerabilities."
+S5,Disaster Management,Module 2,"Distinguish hazard types and vulnerability assessment","Describe vulnerability assessment methods."
+
+S5,Disaster Management,Module 3,"Understand risk assessment components and methodologies","Define risk and risk assessment."
+S5,Disaster Management,Module 3,"Understand risk assessment components and methodologies","Explain components of risk assessment."
+S5,Disaster Management,Module 3,"Understand risk assessment components and methodologies","Describe methodologies used for risk assessment."
+
+S5,Disaster Management,Module 4,"Explain disaster risk management and mitigation strategies","Explain phases of disaster risk management."
+S5,Disaster Management,Module 4,"Explain disaster risk management and mitigation strategies","Describe measures to reduce disaster risks."
+S5,Disaster Management,Module 4,"Explain disaster risk management and mitigation strategies","Explain community-based disaster management."
+
+S5,Disaster Management,Module 5,"Understand disaster response and actions","Explain disaster response mechanisms."
+S5,Disaster Management,Module 5,"Understand disaster response and actions","Discuss factors affecting disaster response."
+S5,Disaster Management,Module 5,"Understand disaster response and actions","Describe various disaster response actions."
+
+
+
+S5,Formal Languages & Automata Theory,Module 1,"Classify formal languages into different types","Define formal language and its types."
+S5,Formal Languages & Automata Theory,Module 1,"Classify formal languages into different types","Differentiate between regular, context-free and context-sensitive languages."
+S5,Formal Languages & Automata Theory,Module 1,"Classify formal languages into different types","Classify a given language into appropriate category."
+
+S5,Formal Languages & Automata Theory,Module 2,"Represent regular languages using formal models","Explain finite state automaton with example."
+S5,Formal Languages & Automata Theory,Module 2,"Represent regular languages using formal models","Convert regular expression to finite automaton."
+S5,Formal Languages & Automata Theory,Module 2,"Represent regular languages using formal models","Explain Myhill-Nerode theorem."
+
+S5,Formal Languages & Automata Theory,Module 3,"Design PDA and CFG for context-free languages","Define pushdown automaton."
+S5,Formal Languages & Automata Theory,Module 3,"Design PDA and CFG for context-free languages","Construct context-free grammar for a given language."
+S5,Formal Languages & Automata Theory,Module 3,"Design PDA and CFG for context-free languages","Design PDA for a given context-free language."
+
+S5,Formal Languages & Automata Theory,Module 4,"Design Turing machines for language recognition","Define Turing machine."
+S5,Formal Languages & Automata Theory,Module 4,"Design Turing machines for language recognition","Explain Turing machine as language acceptor."
+S5,Formal Languages & Automata Theory,Module 4,"Design Turing machines for language recognition","Design a Turing machine for a given problem."
+
+S5,Formal Languages & Automata Theory,Module 5,"Understand decidability and computability concepts","Define decidability."
+S5,Formal Languages & Automata Theory,Module 5,"Understand decidability and computability concepts","Explain decidable and undecidable problems."
+S5,Formal Languages & Automata Theory,Module 5,"Understand decidability and computability concepts","Give examples of undecidable problems."
+
+
+S5,Microprocessors & Microcontrollers,Module 1,"Illustrate architecture and addressing modes of microprocessors","Explain the architecture of 8086 microprocessor."
+S5,Microprocessors & Microcontrollers,Module 1,"Illustrate architecture and addressing modes of microprocessors","Describe different addressing modes in 8086."
+S5,Microprocessors & Microcontrollers,Module 1,"Illustrate architecture and addressing modes of microprocessors","Explain modes of operation of 8086."
+
+S5,Microprocessors & Microcontrollers,Module 2,"Develop 8086 assembly language programs","Write an assembly language program to add two numbers."
+S5,Microprocessors & Microcontrollers,Module 2,"Develop 8086 assembly language programs","Explain instruction set of 8086."
+S5,Microprocessors & Microcontrollers,Module 2,"Develop 8086 assembly language programs","Develop a program for arithmetic operations in 8086."
+
+S5,Microprocessors & Microcontrollers,Module 3,"Understand interrupts and their handling in 8086","Define interrupt and its types."
+S5,Microprocessors & Microcontrollers,Module 3,"Understand interrupts and their handling in 8086","Explain interrupt handling in 8086."
+S5,Microprocessors & Microcontrollers,Module 3,"Understand interrupts and their handling in 8086","Write a program using interrupts in 8086."
+
+S5,Microprocessors & Microcontrollers,Module 4,"Interface peripherals with microprocessors","Explain interfacing of 8255 with microprocessor."
+S5,Microprocessors & Microcontrollers,Module 4,"Interface peripherals with microprocessors","Describe working of 8254 timer."
+S5,Microprocessors & Microcontrollers,Module 4,"Interface peripherals with microprocessors","Explain DMA controller 8257 and memory interfacing."
+
+S5,Microprocessors & Microcontrollers,Module 5,"Understand microcontroller features and programming","Explain features of microcontrollers."
+S5,Microprocessors & Microcontrollers,Module 5,"Understand microcontroller features and programming","Differentiate microprocessor and microcontroller."
+S5,Microprocessors & Microcontrollers,Module 5,"Understand microcontroller features and programming","Develop a simple program using microcontroller."
+
+
+S6,Compiler Design,Module 1,"Explain phases of compilation and lexical analysis","List and explain phases of a compiler."
+S6,Compiler Design,Module 1,"Explain phases of compilation and lexical analysis","Explain lexical analysis and its role."
+S6,Compiler Design,Module 1,"Explain phases of compilation and lexical analysis","Design a lexical analyzer using finite automata."
+
+S6,Compiler Design,Module 2,"Model syntax using CFG and derivations","Define context free grammar with example."
+S6,Compiler Design,Module 2,"Model syntax using CFG and derivations","Explain leftmost and rightmost derivations."
+S6,Compiler Design,Module 2,"Model syntax using CFG and derivations","Construct parse tree for a given grammar."
+
+S6,Compiler Design,Module 3,"Compare parsers and construct parsing methods","Differentiate top-down and bottom-up parsing."
+S6,Compiler Design,Module 3,"Compare parsers and construct parsing methods","Explain LL(1) parsing."
+S6,Compiler Design,Module 3,"Compare parsers and construct parsing methods","Construct LR parser for a given grammar."
+
+S6,Compiler Design,Module 4,"Apply syntax directed translation and storage strategies","Explain syntax directed translation."
+S6,Compiler Design,Module 4,"Apply syntax directed translation and storage strategies","Compare static, stack and heap storage allocation."
+S6,Compiler Design,Module 4,"Apply syntax directed translation and storage strategies","Explain different intermediate representations."
+
+S6,Compiler Design,Module 5,"Understand code optimization and generation techniques","Explain code optimization techniques."
+S6,Compiler Design,Module 5,"Understand code optimization and generation techniques","Describe loop optimization techniques."
+S6,Compiler Design,Module 5,"Understand code optimization and generation techniques","Explain code generation process."
+
+
+S6,Algorithm Analysis & Design,Module 1,"Analyze algorithms using asymptotic notations","Define time and space complexity."
+S6,Algorithm Analysis & Design,Module 1,"Analyze algorithms using asymptotic notations","Explain Big-O, Big-Theta and Big-Omega notations."
+S6,Algorithm Analysis & Design,Module 1,"Analyze algorithms using asymptotic notations","Analyze time complexity of a given algorithm."
+
+S6,Algorithm Analysis & Design,Module 2,"Solve recurrence relations using various methods","Define recurrence relation with example."
+S6,Algorithm Analysis & Design,Module 2,"Solve recurrence relations using various methods","Solve recurrence using iteration and substitution method."
+S6,Algorithm Analysis & Design,Module 2,"Solve recurrence relations using various methods","Explain Master’s theorem with example."
+
+S6,Algorithm Analysis & Design,Module 3,"Apply graph algorithms and advanced data structures","Explain BFS and DFS algorithms."
+S6,Algorithm Analysis & Design,Module 3,"Apply graph algorithms and advanced data structures","Describe AVL tree and its balancing operations."
+S6,Algorithm Analysis & Design,Module 3,"Apply graph algorithms and advanced data structures","Explain disjoint set operations with example."
+
+S6,Algorithm Analysis & Design,Module 4,"Apply algorithm design techniques","Explain divide and conquer strategy with example."
+S6,Algorithm Analysis & Design,Module 4,"Apply algorithm design techniques","Explain greedy method with example."
+S6,Algorithm Analysis & Design,Module 4,"Apply algorithm design techniques","Explain dynamic programming and backtracking."
+
+S6,Algorithm Analysis & Design,Module 5,"Classify problems based on computational complexity","Define tractable and intractable problems."
+S6,Algorithm Analysis & Design,Module 5,"Classify problems based on computational complexity","Explain NP-complete problems."
+S6,Algorithm Analysis & Design,Module 5,"Classify problems based on computational complexity","Discuss strategies to handle intractable problems."
+
+
+
+S6,Computer Graphics & Image Processing,Module 1,"Describe working principles of graphics devices","Explain different graphics devices."
+S6,Computer Graphics & Image Processing,Module 1,"Describe working principles of graphics devices","Describe working of CRT and LCD displays."
+S6,Computer Graphics & Image Processing,Module 1,"Describe working principles of graphics devices","Explain raster scan and random scan displays."
+
+S6,Computer Graphics & Image Processing,Module 2,"Illustrate line, circle and polygon algorithms","Explain DDA line drawing algorithm."
+S6,Computer Graphics & Image Processing,Module 2,"Illustrate line, circle and polygon algorithms","Describe Bresenham’s line and circle drawing algorithms."
+S6,Computer Graphics & Image Processing,Module 2,"Illustrate line, circle and polygon algorithms","Explain polygon filling algorithms."
+
+S6,Computer Graphics & Image Processing,Module 3,"Apply transformations, clipping and projection techniques","Explain 2D and 3D transformations."
+S6,Computer Graphics & Image Processing,Module 3,"Apply transformations, clipping and projection techniques","Describe clipping algorithms."
+S6,Computer Graphics & Image Processing,Module 3,"Apply transformations, clipping and projection techniques","Explain projection techniques in computer graphics."
+
+S6,Computer Graphics & Image Processing,Module 4,"Understand visible surface detection methods","Explain back-face detection method."
+S6,Computer Graphics & Image Processing,Module 4,"Understand visible surface detection methods","Describe Z-buffer algorithm."
+S6,Computer Graphics & Image Processing,Module 4,"Understand visible surface detection methods","Explain scan-line algorithm."
+
+S6,Computer Graphics & Image Processing,Module 5,"Understand digital image representation and processing","Explain digital image representation."
+S6,Computer Graphics & Image Processing,Module 5,"Understand digital image representation and processing","Describe pixel relationships."
+S6,Computer Graphics & Image Processing,Module 5,"Understand digital image representation and processing","Explain basic image processing operations."
+
+
+
+S7,Artificial Intelligence,Module 1,"Explain fundamental concepts of intelligent systems and architecture","Define Artificial Intelligence and its applications."
+S7,Artificial Intelligence,Module 1,"Explain fundamental concepts of intelligent systems and architecture","Explain components of an intelligent system."
+S7,Artificial Intelligence,Module 1,"Explain fundamental concepts of intelligent systems and architecture","Describe architecture of AI systems."
+
+S7,Artificial Intelligence,Module 2,"Illustrate uninformed and informed search techniques","Explain uninformed search techniques such as BFS and DFS."
+S7,Artificial Intelligence,Module 2,"Illustrate uninformed and informed search techniques","Explain informed search techniques such as A* algorithm."
+S7,Artificial Intelligence,Module 2,"Illustrate uninformed and informed search techniques","Compare uninformed and informed search techniques."
+
+S7,Artificial Intelligence,Module 3,"Solve constraint satisfaction problems using search techniques","Define constraint satisfaction problem (CSP)."
+S7,Artificial Intelligence,Module 3,"Solve constraint satisfaction problems using search techniques","Explain backtracking algorithm for CSP."
+S7,Artificial Intelligence,Module 3,"Solve constraint satisfaction problems using search techniques","Solve CSP using heuristics."
+
+S7,Artificial Intelligence,Module 4,"Represent knowledge and apply inference techniques","Explain knowledge representation using logic."
+S7,Artificial Intelligence,Module 4,"Represent knowledge and apply inference techniques","Describe propositional and predicate logic."
+S7,Artificial Intelligence,Module 4,"Represent knowledge and apply inference techniques","Explain inference techniques in AI."
+
+S7,Artificial Intelligence,Module 5,"Illustrate learning techniques in intelligent systems","Explain supervised learning and unsupervised learning."
+S7,Artificial Intelligence,Module 5,"Illustrate learning techniques in intelligent systems","Describe reinforcement learning."
+S7,Artificial Intelligence,Module 5,"Illustrate learning techniques in intelligent systems","Compare different learning techniques."
+
+
+S7,Industrial Safety Engineering,Module 1,"Describe accident causation theories and prevention","Explain theories of accident causation."
+S7,Industrial Safety Engineering,Module 1,"Describe accident causation theories and prevention","Discuss causes of industrial accidents."
+S7,Industrial Safety Engineering,Module 1,"Describe accident causation theories and prevention","Explain preventive measures for industrial accidents."
+
+S7,Industrial Safety Engineering,Module 2,"Understand personal protective equipment and safety practices","What is personal protective equipment (PPE)?"
+S7,Industrial Safety Engineering,Module 2,"Understand personal protective equipment and safety practices","Explain selection and safety performance of PPE."
+S7,Industrial Safety Engineering,Module 2,"Understand personal protective equipment and safety practices","Discuss importance of housekeeping in industries."
+
+S7,Industrial Safety Engineering,Module 3,"Understand safety issues in construction industries","Explain safety issues in construction industries."
+S7,Industrial Safety Engineering,Module 3,"Understand safety issues in construction industries","Discuss hazards in construction sites."
+S7,Industrial Safety Engineering,Module 3,"Understand safety issues in construction industries","Explain safety measures in construction work."
+
+S7,Industrial Safety Engineering,Module 4,"Identify hazards in machines and material handling","Explain hazards associated with machines."
+S7,Industrial Safety Engineering,Module 4,"Identify hazards in machines and material handling","Describe mechanical material handling hazards."
+S7,Industrial Safety Engineering,Module 4,"Identify hazards in machines and material handling","Explain safety measures for machine operations."
+
+S7,Industrial Safety Engineering,Module 5,"Apply hazard identification tools and chemical safety","Explain hazard identification techniques."
+S7,Industrial Safety Engineering,Module 5,"Apply hazard identification tools and chemical safety","Describe different types of chemical hazards."
+S7,Industrial Safety Engineering,Module 5,"Apply hazard identification tools and chemical safety","Explain tools used for hazard analysis in industries."
+
+
+
+S8,Distributed Computing,Module 1,"Summarize distributed computation models and logical time","Define distributed system and its characteristics."
+S8,Distributed Computing,Module 1,"Summarize distributed computation models and logical time","Explain distributed computation models."
+S8,Distributed Computing,Module 1,"Summarize distributed computation models and logical time","Describe logical clocks and Lamport timestamps."
+
+S8,Distributed Computing,Module 2,"Illustrate election, snapshot and termination algorithms","Explain election algorithms in distributed systems."
+S8,Distributed Computing,Module 2,"Illustrate election, snapshot and termination algorithms","Describe global snapshot algorithm."
+S8,Distributed Computing,Module 2,"Illustrate election, snapshot and termination algorithms","Explain termination detection algorithms."
+
+S8,Distributed Computing,Module 3,"Compare mutual exclusion algorithms","Explain token-based mutual exclusion algorithm."
+S8,Distributed Computing,Module 3,"Compare mutual exclusion algorithms","Describe non-token based mutual exclusion algorithm."
+S8,Distributed Computing,Module 3,"Compare mutual exclusion algorithms","Explain quorum-based mutual exclusion algorithm."
+
+S8,Distributed Computing,Module 4,"Understand deadlock detection and shared memory","Explain deadlock detection in distributed systems."
+S8,Distributed Computing,Module 4,"Understand deadlock detection and shared memory","Describe distributed shared memory."
+S8,Distributed Computing,Module 4,"Understand deadlock detection and shared memory","Explain significance of deadlock handling."
+
+S8,Distributed Computing,Module 5,"Explain failure recovery and consensus","Explain failure recovery techniques."
+S8,Distributed Computing,Module 5,"Explain failure recovery and consensus","Describe consensus problem in distributed systems."
+S8,Distributed Computing,Module 5,"Explain failure recovery and consensus","Explain agreement protocols."
+

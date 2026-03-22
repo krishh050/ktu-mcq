@@ -1,0 +1,124 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero fade-in">
+    <div class="quiz-toolbar">
+        <div>
+            <div class="eyebrow">Quiz Session</div>
+            <h2>{{ subject }} Quiz</h2>
+            <p class="lead-copy mb-0">Answer each question and submit when you are ready.</p>
+        </div>
+        <div class="badge-soft">
+            {{ questions|length }} questions
+            {% if requested_count and questions|length < requested_count %}
+                <span>({{ requested_count }} requested)</span>
+            {% endif %}
+        </div>
+    </div>
+    {% if duration and duration > 0 %}
+        <div class="sticky-timer">
+            <strong>Time Left:</strong> <span id="timer"></span>
+        </div>
+    {% endif %}
+</section>
+
+{% if requested_count and questions|length < requested_count and questions|length > 0 %}
+<div class="alert alert-warning">
+    You asked for {{ requested_count }} questions, but only {{ questions|length }} match this subject and module selection.
+</div>
+{% endif %}
+
+{% if questions|length == 0 %}
+<div class="alert alert-warning">
+    <strong>No questions found.</strong> There are no MCQ questions available for {{ subject }} in {{ semester }}.
+</div>
+<a class="btn btn-outline-secondary" href="/subjects/{{ semester }}">Back to Subjects</a>
+{% else %}
+<div class="question-shell fade-in">
+    {% for q in questions %}
+        <div class="question-card">
+            <h5 class="mb-0"><span class="question-number">{{ loop.index }}</span>{{ q.question }}</h5>
+            <div class="options-list">
+                <label class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ q.id }}" value="{{ q.option1 }}">
+                    <span class="form-check-label">{{ q.option1 }}</span>
+                </label>
+                <label class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ q.id }}" value="{{ q.option2 }}">
+                    <span class="form-check-label">{{ q.option2 }}</span>
+                </label>
+                <label class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ q.id }}" value="{{ q.option3 }}">
+                    <span class="form-check-label">{{ q.option3 }}</span>
+                </label>
+                <label class="form-check">
+                    <input class="form-check-input" type="radio" name="{{ q.id }}" value="{{ q.option4 }}">
+                    <span class="form-check-label">{{ q.option4 }}</span>
+                </label>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="d-flex gap-2 mt-4 flex-wrap">
+    <button id="submitBtn" class="btn btn-primary">Submit Quiz</button>
+    <a class="btn btn-outline-secondary" href="/subjects/{{ semester }}">Back to Subjects</a>
+</div>
+
+{% if duration and duration > 0 %}
+<script>
+let seconds = {{ duration }} * 60;
+const timerEl = document.getElementById('timer');
+function formatTime(s) {
+    const m = Math.floor(s / 60);
+    const r = s % 60;
+    return `${m}:${r.toString().padStart(2, '0')}`;
+}
+timerEl.textContent = formatTime(seconds);
+const interval = setInterval(() => {
+    seconds -= 1;
+    timerEl.textContent = formatTime(seconds);
+    if (seconds <= 0) {
+        clearInterval(interval);
+        alert('Time is up. Submitting quiz.');
+        document.getElementById('submitBtn').click();
+    }
+}, 1000);
+</script>
+{% endif %}
+
+<script>
+document.getElementById('submitBtn').addEventListener('click', function() {
+    const form = document.createElement('form');
+    form.method = 'POST';
+    form.style.display = 'none';
+
+    const totalMarks = document.createElement('input');
+    totalMarks.name = 'total_marks';
+    totalMarks.value = '{{ total_marks }}';
+    form.appendChild(totalMarks);
+
+    document.querySelectorAll('input[type=radio]:checked').forEach(function(radio) {
+        const input = document.createElement('input');
+        input.name = radio.name;
+        input.value = radio.value;
+        form.appendChild(input);
+    });
+
+    document.querySelectorAll('.question-card').forEach(function(card) {
+        const firstInput = card.querySelector('input[type=radio]');
+        const nameAttr = firstInput ? firstInput.name : null;
+        if (nameAttr && !form.querySelector(`[name="${nameAttr}"]`)) {
+            const emptyInput = document.createElement('input');
+            emptyInput.name = nameAttr;
+            emptyInput.value = '';
+            form.appendChild(emptyInput);
+        }
+    });
+
+    document.body.appendChild(form);
+    form.submit();
+});
+</script>
+{% endif %}
+{% endblock %}

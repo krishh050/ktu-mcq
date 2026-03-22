@@ -1,0 +1,253 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero fade-in">
+    <div class="eyebrow">Student Dashboard</div>
+    <h2>Choose Your Study Mode</h2>
+    <p class="lead-copy mb-0">Start by choosing one option below. Only the selected section will open.</p>
+    <div class="hero-metrics">
+        <div class="metric-pill">
+            <strong>{{ semesters|length }}</strong>
+            <span class="text-muted">Semesters ready</span>
+        </div>
+        <div class="metric-pill">
+            <strong>Flexible</strong>
+            <span class="text-muted">Module and timer filters</span>
+        </div>
+    </div>
+</section>
+
+<div id="modePicker" class="dashboard-choice-grid fade-in">
+    <button type="button" id="showQuizBtn" class="dashboard-choice-card">
+        <span class="eyebrow">Practice</span>
+        <h3>Attempt Quiz</h3>
+        <p class="text-muted mb-0">Build a quiz with semester, subject, module, question count, and timer options.</p>
+    </button>
+    <button type="button" id="showSyllabusBtn" class="dashboard-choice-card">
+        <span class="eyebrow">Review</span>
+        <h3>View Syllabus Questions</h3>
+        <p class="text-muted mb-0">Browse course outcome questions by semester, subject, and module.</p>
+    </button>
+</div>
+
+<div id="selectedModeWrap" class="d-none">
+    <div class="mb-3">
+        <button type="button" id="backToChoicesBtn" class="btn btn-outline-secondary">Back to Options</button>
+    </div>
+
+    <div class="card section-card fade-in d-none" id="quizSection">
+            <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
+                <div>
+                    <div class="eyebrow">Quiz Builder</div>
+                    <h4 class="section-title">Assemble a Practice Set</h4>
+                </div>
+                <div class="filter-chip">Timed or untimed attempts</div>
+            </div>
+            <form id="startForm" method="GET" action="">
+                <div class="row g-3">
+                    <div class="col-md-6">
+                        <label class="form-label">Semester</label>
+                        <select id="semester" name="semester" class="form-select" required>
+                            <option value="">Choose...</option>
+                            {% for s in semesters %}
+                                <option value="{{ s }}">{{ s }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label class="form-label">Subject</label>
+                        <select id="subject" name="subject" class="form-select" required>
+                            <option value="">Choose semester first</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Module</label>
+                        <select id="module" name="module" class="form-select">
+                            <option value="">All modules</option>
+                            <option value="Module 1">Module 1</option>
+                            <option value="Module 2">Module 2</option>
+                            <option value="Module 3">Module 3</option>
+                            <option value="Module 4">Module 4</option>
+                            <option value="Module 5">Module 5</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Questions</label>
+                        <select id="count" name="count" class="form-select">
+                            <option value="5">5</option>
+                            <option value="10">10</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="25">25</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Timer</label>
+                        <select id="duration" name="duration" class="form-select">
+                            <option value="0">No timer</option>
+                            <option value="5">5 minutes</option>
+                            <option value="10">10 minutes</option>
+                            <option value="15">15 minutes</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <button id="startBtn" type="submit" class="btn btn-primary">Start Quiz</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+
+    <div class="card section-card fade-in d-none" id="syllabusSection">
+            <div class="d-flex flex-wrap justify-content-between align-items-start gap-3 mb-3">
+                <div>
+                    <div class="eyebrow">Course Outcomes</div>
+                    <h4 class="section-title">Browse Syllabus Questions</h4>
+                </div>
+                <div class="filter-chip">Subject and module filters</div>
+            </div>
+            <form id="syllabusForm" method="GET" action="{{ url_for('syllabus') }}">
+                <div class="row g-3">
+                    <div class="col-md-4">
+                        <label class="form-label">Semester</label>
+                        <select id="co_semester" name="semester" class="form-select" required>
+                            <option value="">Choose...</option>
+                            {% for s in semesters %}
+                                <option value="{{ s }}">{{ s }}</option>
+                            {% endfor %}
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Subject</label>
+                        <select id="co_subject" name="subject" class="form-select" required>
+                            <option value="">Choose semester first</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-4">
+                        <label class="form-label">Module</label>
+                        <select id="co_module" name="module" class="form-select">
+                            <option value="">All modules</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <button type="submit" class="btn btn-primary">View Syllabus Questions</button>
+                    </div>
+                </div>
+            </form>
+    </div>
+</div>
+
+<script>
+const modePicker = document.getElementById('modePicker');
+const selectedModeWrap = document.getElementById('selectedModeWrap');
+const quizSection = document.getElementById('quizSection');
+const syllabusSection = document.getElementById('syllabusSection');
+const backToChoicesBtn = document.getElementById('backToChoicesBtn');
+
+function showMode(mode) {
+  modePicker.classList.add('d-none');
+  selectedModeWrap.classList.remove('d-none');
+  quizSection.classList.add('d-none');
+  syllabusSection.classList.add('d-none');
+
+  if (mode === 'quiz') {
+    quizSection.classList.remove('d-none');
+  }
+  if (mode === 'syllabus') {
+    syllabusSection.classList.remove('d-none');
+  }
+}
+
+document.getElementById('showQuizBtn').addEventListener('click', function() {
+  showMode('quiz');
+});
+document.getElementById('showSyllabusBtn').addEventListener('click', function() {
+  showMode('syllabus');
+});
+backToChoicesBtn.addEventListener('click', function() {
+  selectedModeWrap.classList.add('d-none');
+  quizSection.classList.add('d-none');
+  syllabusSection.classList.add('d-none');
+  modePicker.classList.remove('d-none');
+});
+
+document.getElementById('semester').addEventListener('change', async function() {
+  const sem = this.value;
+  const subj = document.getElementById('subject');
+  const module = document.getElementById('module');
+  subj.innerHTML = '<option>Loading...</option>';
+  module.innerHTML = '<option value="">All modules</option>';
+  if (!sem) {
+    subj.innerHTML = '<option value="">Choose semester first</option>';
+    return;
+  }
+  const res = await fetch('/api/subjects?semester=' + encodeURIComponent(sem));
+  const list = await res.json();
+  subj.innerHTML = '<option value="">Choose...</option>' + list.map(s => `<option value="${s}">${s}</option>`).join('');
+});
+
+document.getElementById('subject').addEventListener('change', async function() {
+  const sem = document.getElementById('semester').value;
+  const sub = this.value;
+  const module = document.getElementById('module');
+  if (!sem || !sub) {
+    module.innerHTML = '<option value="">All modules</option>';
+    return;
+  }
+  const res = await fetch(`/api/modules?semester=${encodeURIComponent(sem)}&subject=${encodeURIComponent(sub)}`);
+  const list = await res.json();
+  module.innerHTML = '<option value="">All modules</option>' + list.map(m => `<option value="${m}">${m}</option>`).join('');
+});
+
+document.getElementById('startForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  const sem = document.getElementById('semester').value;
+  const sub = document.getElementById('subject').value;
+  if (!sem || !sub) {
+    alert('Please choose semester and subject');
+    return;
+  }
+  const mod = document.getElementById('module').value;
+  const count = document.getElementById('count').value;
+  const duration = document.getElementById('duration').value;
+  let url = `/quiz/${encodeURIComponent(sem)}/${encodeURIComponent(sub)}?count=${count}&duration=${duration}`;
+  if (mod) url += '&module=' + encodeURIComponent(mod);
+  window.location.href = url;
+});
+
+document.getElementById('co_semester').addEventListener('change', async function() {
+  const sem = this.value;
+  const subj = document.getElementById('co_subject');
+  const mod = document.getElementById('co_module');
+  subj.innerHTML = '<option>Loading...</option>';
+  mod.innerHTML = '<option value="">All modules</option>';
+  if (!sem) {
+    subj.innerHTML = '<option value="">Choose semester first</option>';
+    return;
+  }
+  const res = await fetch('/api/co_subjects?semester=' + encodeURIComponent(sem));
+  const list = await res.json();
+  subj.innerHTML = '<option value="">Choose...</option>' + list.map(s => `<option value="${s}">${s}</option>`).join('');
+});
+
+document.getElementById('co_subject').addEventListener('change', async function() {
+  const sem = document.getElementById('co_semester').value;
+  const sub = this.value;
+  const mod = document.getElementById('co_module');
+  if (!sem || !sub) {
+    mod.innerHTML = '<option value="">All modules</option>';
+    return;
+  }
+  const res = await fetch(`/api/co_modules?semester=${encodeURIComponent(sem)}&subject=${encodeURIComponent(sub)}`);
+  const list = await res.json();
+  mod.innerHTML = '<option value="">All modules</option>' + list.map(m => `<option value="${m}">${m}</option>`).join('');
+});
+</script>
+{% endblock %}

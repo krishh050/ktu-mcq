@@ -1,0 +1,90 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero fade-in">
+    <div class="eyebrow">Quiz Result</div>
+    <h2>{{ subject }}</h2>
+    <p class="lead-copy mb-0">Review your score, accuracy, and each answer choice with a clearer summary layout.</p>
+</section>
+
+<div class="row g-3 mb-4 fade-in">
+    <div class="col-6 col-lg-3">
+        <div class="stat-card brand">
+            <div class="stat-value">{{ score }} / {{ total }}</div>
+            <div class="text-muted mt-2">Marks</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="stat-card accent">
+            <div class="stat-value">{{ percent }}%</div>
+            <div class="text-muted mt-2">Percentage</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="stat-card success">
+            <div class="stat-value">{{ correct }}</div>
+            <div class="text-muted mt-2">Correct</div>
+        </div>
+    </div>
+    <div class="col-6 col-lg-3">
+        <div class="stat-card danger">
+            <div class="stat-value">{{ incorrect }}</div>
+            <div class="text-muted mt-2">Incorrect</div>
+        </div>
+    </div>
+</div>
+
+<div class="card section-card mb-4 fade-in">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+        <div>
+            <h4 class="section-title mb-1">Performance Overview</h4>
+            <p class="text-muted mb-0">Your score converted into a quick progress snapshot.</p>
+        </div>
+        <div class="badge-soft">{{ semester }}</div>
+    </div>
+    <div class="progress mt-4" style="height: 18px;">
+        <div class="progress-bar" role="progressbar" style="width: {{ percent }}%;">{{ percent }}%</div>
+    </div>
+</div>
+
+{% if review %}
+<div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+    <div>
+        <h4 class="section-title mb-1">Answer Review</h4>
+        <p class="text-muted mb-0">Correct answers are highlighted in green. Incorrect selections are shown in red.</p>
+    </div>
+</div>
+<div class="question-shell fade-in">
+    {% for item in review %}
+        <div class="question-card">
+            <h5 class="mb-3"><span class="question-number">{{ item.num }}</span>{{ item.question }}</h5>
+            <div class="options-list">
+                {% for opt in item.options %}
+                    {% if opt == item.correct_answer %}
+                        <div class="review-option correct">
+                            <strong>Correct:</strong> <span>{{ opt }}</span>
+                        </div>
+                    {% elif opt == item.user_answer and not item.is_correct %}
+                        <div class="review-option incorrect">
+                            <strong>Your answer:</strong> <span>{{ opt }}</span>
+                        </div>
+                    {% else %}
+                        <div class="review-option neutral">{{ opt }}</div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            {% if not item.user_answer %}
+                <div class="review-option incorrect mt-3">
+                    <strong>Not answered.</strong> <span>Correct answer: {{ item.correct_answer }}</span>
+                </div>
+            {% endif %}
+        </div>
+    {% endfor %}
+</div>
+{% endif %}
+
+<div class="d-flex justify-content-center gap-2 mt-4 flex-wrap">
+    <a class="btn btn-primary" href="{{ url_for('dashboard') }}">Dashboard</a>
+    <a class="btn btn-outline-secondary" href="{{ url_for('subjects', semester=semester) }}">Back to {{ semester }} Subjects</a>
+</div>
+{% endblock %}

@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero fade-in">
+    <div class="eyebrow">Welcome</div>
+    <h1>Choose Your Role</h1>
+    <p class="lead-copy mb-0">Start by selecting how you want to enter the system. Student and admin access now begin from the same landing page.</p>
+    <div class="hero-metrics">
+        <div class="metric-pill">
+            <strong>Student</strong>
+            <span class="text-muted">Practice quizzes and review results</span>
+        </div>
+        <div class="metric-pill">
+            <strong>Admin</strong>
+            <span class="text-muted">Manage content and monitor the system</span>
+        </div>
+    </div>
+</section>
+
+<section class="role-grid fade-in">
+    <a class="role-card" href="{{ url_for('login') }}">
+        <div class="role-avatar student-avatar">S</div>
+        <div class="eyebrow">Student</div>
+        <h3>Student Login</h3>
+        <p class="text-muted mb-0">Enter as a student to take quizzes, browse syllabus questions, and review your progress.</p>
+    </a>
+
+    <a class="role-card" href="{{ url_for('admin_login') }}">
+        <div class="role-avatar admin-avatar">A</div>
+        <div class="eyebrow">Admin</div>
+        <h3>Admin Login</h3>
+        <p class="text-muted mb-0">Enter as an admin to access the management dashboard and administrative tools.</p>
+    </a>
+</section>
+{% endblock %}

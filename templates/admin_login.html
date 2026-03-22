@@ -1,0 +1,29 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+  <div class="col-lg-6 col-xl-5">
+    <section class="page-hero fade-in">
+      <div class="eyebrow">Administrator</div>
+      <h2>Admin Login</h2>
+      <p class="lead-copy mb-0">Use administrator credentials to access the admin dashboard and system controls.</p>
+    </section>
+    <div class="card section-card fade-in">
+      <form method="POST">
+        <div class="mb-3">
+          <label class="form-label">Username</label>
+          <input type="text" class="form-control" name="username" value="{{ username|default('') }}" required>
+        </div>
+        <div class="mb-3">
+          <label class="form-label">Password</label>
+          <input type="password" class="form-control" name="password" required>
+        </div>
+        <div class="d-flex gap-2 flex-wrap">
+          <button class="btn btn-primary" type="submit">Login as Admin</button>
+          <a class="btn btn-outline-secondary" href="{{ url_for('home') }}">Back</a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

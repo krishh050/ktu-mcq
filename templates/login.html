@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-6 col-xl-5">
+        <section class="page-hero fade-in">
+            <div class="eyebrow">Student Access</div>
+            <h2>Login to Continue</h2>
+            <p class="lead-copy mb-0">Open your dashboard, review performance, and continue practicing from where you left off.</p>
+        </section>
+        <div class="card section-card fade-in">
+            <h4 class="section-title">Student Login</h4>
+            <form method="POST">
+                <div class="mb-3">
+                    <label class="form-label">KTU ID</label>
+                    <input type="text" class="form-control" name="ktuid" value="{{ ktuid|default('') }}" required>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label">Password</label>
+                    <input type="password" class="form-control" name="password" required>
+                </div>
+                <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                    <button class="btn btn-primary" type="submit">Login</button>
+                    <a class="btn btn-outline-secondary" href="{{ url_for('register') }}">Create Account</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

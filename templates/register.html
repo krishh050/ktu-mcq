@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-lg-8">
+        <section class="page-hero fade-in">
+            <div class="eyebrow">Student Registration</div>
+            <h2>Create Your Account</h2>
+            <p class="lead-copy mb-0">Register once, then track quiz history, scores, and subject progress from your profile.</p>
+        </section>
+        <div class="card section-card fade-in">
+            <form method="POST">
+                <div class="row g-3">
+                    <div class="col-12">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" name="name" value="{{ name|default('') }}" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">KTU ID</label>
+                        <input type="text" class="form-control" name="ktuid" value="{{ ktuid|default('') }}" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Roll No</label>
+                        <input type="text" class="form-control" name="roll_no" value="{{ roll_no|default('') }}" required>
+                    </div>
+                    <div class="col-12">
+                        <label class="form-label">Department</label>
+                        <input type="text" class="form-control" name="department" value="{{ department|default('') }}" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Password</label>
+                        <input type="password" class="form-control" name="password" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="form-label">Confirm Password</label>
+                        <input type="password" class="form-control" name="confirm_password" required>
+                    </div>
+                    <div class="col-12 d-flex gap-2 flex-wrap">
+                        <button class="btn btn-primary" type="submit">Register</button>
+                        <a class="btn btn-outline-secondary" href="{{ url_for('login') }}">Back to Login</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

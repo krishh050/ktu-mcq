@@ -1,0 +1,119 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero fade-in">
+    <div class="eyebrow">Course Outcome Review</div>
+    <h2>Syllabus Questions</h2>
+    <p class="lead-copy mb-0">Filter by semester, subject, and module to browse the theory-side question bank with less clutter.</p>
+</section>
+
+<div class="card section-card mb-4 fade-in">
+    <form method="GET" action="{{ url_for('syllabus') }}">
+        <div class="row g-3">
+            <div class="col-md-4">
+                <label class="form-label">Semester</label>
+                <select id="semester" name="semester" class="form-select" required>
+                    <option value="">Choose...</option>
+                    {% for s in semesters %}
+                        <option value="{{ s }}" {% if selected_semester == s %}selected{% endif %}>{{ s }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Subject</label>
+                <select id="subject" name="subject" class="form-select" required>
+                    <option value="">Choose semester first</option>
+                </select>
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Module</label>
+                <select id="module" name="module" class="form-select">
+                    <option value="">All modules</option>
+                </select>
+            </div>
+            <div class="col-12 d-flex gap-2 flex-wrap">
+                <button type="submit" class="btn btn-primary">Show Questions</button>
+                <a class="btn btn-outline-secondary" href="{{ url_for('dashboard') }}">Back to Dashboard</a>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div class="card section-card fade-in">
+    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <div>
+            <h4 class="section-title mb-1">Questions</h4>
+            <p class="text-muted mb-0">Relevant questions appear below based on the filters you choose.</p>
+        </div>
+        {% if rows %}
+            <div class="badge-soft">{{ rows|length }} result{{ '' if rows|length == 1 else 's' }}</div>
+        {% endif %}
+    </div>
+    {% if rows %}
+        <div class="question-shell">
+            {% for r in rows %}
+                <div class="question-card">
+                    <h5 class="mb-2"><span class="question-number">{{ loop.index }}</span>{{ r[4] }}</h5>
+                    <div class="d-flex flex-wrap gap-2">
+                        <span class="filter-chip">{{ r[0] }}</span>
+                        <span class="filter-chip">{{ r[1] }}</span>
+                        <span class="filter-chip">{{ r[2] or 'Module N/A' }}</span>
+                        <span class="filter-chip">{{ r[3] or 'CO N/A' }}</span>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    {% else %}
+        <div class="alert alert-info mb-0">No syllabus questions found for the selected filters.</div>
+    {% endif %}
+</div>
+
+<script>
+const selectedSubject = "{{ selected_subject|default('') }}";
+const selectedModule = "{{ selected_module|default('') }}";
+
+async function loadSubjects() {
+  const sem = document.getElementById('semester').value;
+  const subj = document.getElementById('subject');
+  const mod = document.getElementById('module');
+  subj.innerHTML = '<option>Loading...</option>';
+  mod.innerHTML = '<option value="">All modules</option>';
+  if (!sem) {
+    subj.innerHTML = '<option value="">Choose semester first</option>';
+    return;
+  }
+  const res = await fetch('/api/co_subjects?semester=' + encodeURIComponent(sem));
+  const list = await res.json();
+  subj.innerHTML = '<option value="">Choose...</option>' + list.map(s => `<option value="${s}">${s}</option>`).join('');
+  if (selectedSubject) subj.value = selectedSubject;
+}
+
+async function loadModules() {
+  const sem = document.getElementById('semester').value;
+  const sub = document.getElementById('subject').value;
+  const mod = document.getElementById('module');
+  if (!sem || !sub) {
+    mod.innerHTML = '<option value="">All modules</option>';
+    return;
+  }
+  const res = await fetch(`/api/co_modules?semester=${encodeURIComponent(sem)}&subject=${encodeURIComponent(sub)}`);
+  const list = await res.json();
+  mod.innerHTML = '<option value="">All modules</option>' + list.map(m => `<option value="${m}">${m}</option>`).join('');
+  if (selectedModule) mod.value = selectedModule;
+}
+
+document.getElementById('semester').addEventListener('change', async function() {
+  await loadSubjects();
+});
+document.getElementById('subject').addEventListener('change', async function() {
+  await loadModules();
+});
+
+document.addEventListener('DOMContentLoaded', async function() {
+  if (document.getElementById('semester').value) {
+    await loadSubjects();
+    await loadModules();
+  }
+});
+</script>
+{% endblock %}

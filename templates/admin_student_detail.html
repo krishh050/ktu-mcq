@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero fade-in">
+  <div class="eyebrow">Student Details</div>
+  <h2>{{ student[1] }}</h2>
+  <p class="lead-copy mb-0">View this student's details and complete quiz history from the admin panel.</p>
+</section>
+
+<div class="row g-3 mb-4 fade-in">
+  <div class="col-md-4">
+    <div class="stat-card brand">
+      <div class="stat-value">{{ total_attempts }}</div>
+      <small class="text-muted">Total Attempts</small>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="stat-card accent">
+      <div class="stat-value">{{ total_scored|int }} / {{ total_possible|int }}</div>
+      <small class="text-muted">Total Marks</small>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="stat-card">
+      <div class="stat-value">{{ avg_percent }}%</div>
+      <small class="text-muted">Average Percentage</small>
+    </div>
+  </div>
+</div>
+
+<div class="row g-4">
+  <div class="col-lg-4">
+    <div class="card section-card fade-in">
+      <h4 class="section-title">Student Information</h4>
+      <p class="mb-3"><strong>Name</strong><br>{{ student[1] }}</p>
+      <p class="mb-3"><strong>KTU ID</strong><br>{{ student[2] }}</p>
+      <p class="mb-3"><strong>Roll No</strong><br>{{ student[3] }}</p>
+      <p class="mb-0"><strong>Department</strong><br>{{ student[4] }}</p>
+    </div>
+  </div>
+  <div class="col-lg-8">
+    <div class="card section-card fade-in">
+      <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+        <div>
+          <h4 class="section-title mb-1">History of This Student</h4>
+          <p class="text-muted mb-0">All quiz attempts made by this student till date.</p>
+        </div>
+        <a class="btn btn-outline-secondary" href="{{ url_for('admin_dashboard') }}">Back to Admin Dashboard</a>
+      </div>
+      {% if history %}
+      <div class="table-responsive">
+        <table class="table table-hover align-middle history-table mb-0">
+          <thead>
+            <tr>
+              <th>Date and Time</th>
+              <th>Semester</th>
+              <th>Subject</th>
+              <th>Module</th>
+              <th class="text-center">Score</th>
+              <th class="text-center">Correct</th>
+              <th class="text-center">Percent</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for row in history %}
+            <tr>
+              <td>{{ (row[7][:10] ~ ' ' ~ row[7][11:16]) if row[7] and row[7]|length >= 16 else (row[7] or '-') }}</td>
+              <td>{{ row[0] }}</td>
+              <td>{{ row[1] }}</td>
+              <td>{{ row[2] or '-' }}</td>
+              <td class="text-center">{{ row[3]|int }} / {{ row[4]|int }}</td>
+              <td class="text-center">{{ row[5] }} / {{ row[6] }}</td>
+              <td class="text-center">{{ ((row[3] / row[4]) * 100)|round(1) if row[4] else 0 }}%</td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+      {% else %}
+      <p class="text-muted mb-0">This student has no quiz history yet.</p>
+      {% endif %}
+    </div>
+  </div>
+</div>
+{% endblock %}

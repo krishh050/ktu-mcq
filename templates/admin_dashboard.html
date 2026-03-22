@@ -1,0 +1,132 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero fade-in">
+  <div class="eyebrow">Admin Dashboard</div>
+  <h2>Student Summary</h2>
+  <p class="lead-copy mb-0">Search students, see how many students are in the system, and open each student's details and history.</p>
+</section>
+
+<div class="card section-card mb-4 fade-in">
+  <h4 class="section-title mb-3">Search Student</h4>
+  <form method="GET" class="row g-3">
+    <div class="col-md-4">
+      <label class="form-label">KTU ID</label>
+      <input type="text" class="form-control" name="ktuid" value="{{ ktuid_filter|default('') }}" placeholder="e.g. KTU123">
+    </div>
+    <div class="col-md-4">
+      <label class="form-label">Department</label>
+      <input type="text" class="form-control" name="department" value="{{ department_filter|default('') }}" placeholder="e.g. CSE">
+    </div>
+    <div class="col-md-4 d-flex align-items-end gap-2">
+      <button class="btn btn-primary" type="submit">Search</button>
+      <a class="btn btn-outline-secondary" href="{{ url_for('admin_dashboard') }}">Clear</a>
+    </div>
+  </form>
+</div>
+
+<div class="row g-3 mb-4 fade-in">
+  <div class="col-md-4">
+    <div class="stat-card brand">
+      <div class="stat-value">{{ total_students }}</div>
+      <small class="text-muted">Total Students</small>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="stat-card accent">
+      <div class="stat-value">{{ total_attempts }}</div>
+      <small class="text-muted">Quiz Attempts</small>
+    </div>
+  </div>
+  <div class="col-md-4">
+    <div class="stat-card">
+      <div class="stat-value">{{ avg_percent }}%</div>
+      <small class="text-muted">Average Percentage</small>
+    </div>
+  </div>
+</div>
+
+<div class="card section-card mb-4 fade-in">
+  <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+    <div>
+      <h4 class="section-title mb-1">See Student Details</h4>
+      <p class="text-muted mb-0">Open any student to see full details and the history of that student.</p>
+    </div>
+    <div class="badge-soft">{{ total_students }} student{{ '' if total_students == 1 else 's' }}</div>
+  </div>
+  {% if students %}
+  <div class="table-responsive">
+    <table class="table table-hover align-middle history-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>KTU ID</th>
+          <th>Department</th>
+          <th class="text-center">Attempts</th>
+          <th class="text-center">Marks</th>
+          <th class="text-center">Avg %</th>
+          <th class="text-center">Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for s in students %}
+        {% set possible = s[5] %}
+        {% set avg = ((s[4] / possible) * 100) if possible else 0 %}
+        <tr>
+          <td>{{ s[0] }}</td>
+          <td>{{ s[1] }}</td>
+          <td>{{ s[2] }}</td>
+          <td class="text-center">{{ s[3] }}</td>
+          <td class="text-center">{{ s[4]|int }} / {{ s[5]|int }}</td>
+          <td class="text-center">{{ avg|round(1) }}%</td>
+          <td class="text-center">
+            <a class="btn btn-sm btn-primary" href="{{ url_for('admin_student_detail', user_id=s[6]) }}">Open</a>
+          </td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="text-muted mb-0">No students found.</p>
+  {% endif %}
+</div>
+
+<div class="card section-card fade-in">
+  <h4 class="section-title mb-3">Recent Quiz History</h4>
+  {% if attempts %}
+  <div class="table-responsive">
+    <table class="table table-striped table-sm align-middle history-table">
+      <thead>
+        <tr>
+          <th>Date and Time</th>
+          <th>Student</th>
+          <th>KTU ID</th>
+          <th>Semester</th>
+          <th>Subject</th>
+          <th>Module</th>
+          <th class="text-center">Score</th>
+          <th class="text-center">Correct</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for a in attempts %}
+        <tr>
+          <td>{{ (a[9][:10] ~ ' ' ~ a[9][11:16]) if a[9] and a[9]|length >= 16 else (a[9] or '-') }}</td>
+          <td>{{ a[0] }}</td>
+          <td>{{ a[1] }}</td>
+          <td>{{ a[2] }}</td>
+          <td>{{ a[3] }}</td>
+          <td>{{ a[4] or '-' }}</td>
+          <td class="text-center">{{ a[5]|int }} / {{ a[6]|int }}</td>
+          <td class="text-center">{{ a[7] }} / {{ a[8] }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% else %}
+  <p class="text-muted mb-0">No quiz attempts found yet.</p>
+  {% endif %}
+</div>
+{% endblock %}

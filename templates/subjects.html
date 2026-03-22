@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero fade-in">
+    <div class="eyebrow">Subject Picker</div>
+    <h2>{{ semester }} Subjects</h2>
+    <p class="lead-copy mb-0">Choose a subject card, set the number of questions, and move straight into the quiz.</p>
+</section>
+
+{% if subjects %}
+    <section class="subject-grid fade-in">
+        {% for subject in subjects %}
+            <a class="subject-card" href="#" data-subject="{{ subject[0] }}">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <div class="eyebrow mb-3">Subject</div>
+                        <h5 class="mb-2">{{ subject[0] }}</h5>
+                        <p class="subject-meta mb-0">Open setup options and start a focused practice round.</p>
+                    </div>
+                </div>
+            </a>
+        {% endfor %}
+    </section>
+{% else %}
+    <div class="alert alert-info">No subjects found for this semester.</div>
+{% endif %}
+
+<div class="mt-4">
+    <a class="btn btn-outline-secondary" href="/">Back</a>
+</div>
+
+<div class="modal fade" id="quizOptionsModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header border-0 pb-0">
+                <div>
+                    <div class="eyebrow">Quick Setup</div>
+                    <h5 class="modal-title mt-2">Build Your Quiz</h5>
+                </div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body pt-2">
+                <p class="text-muted mb-2">Select the number of questions for <strong id="modalSubjectName"></strong>.</p>
+                <label class="form-label">Number of questions</label>
+                <select id="questionCount" class="form-select">
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="25">25</option>
+                </select>
+            </div>
+            <div class="modal-footer border-0 pt-0">
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cancel</button>
+                <button type="button" class="btn btn-primary" id="startQuizBtn">Start Quiz</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const semester = "{{ semester }}";
+    const modalEl = document.getElementById('quizOptionsModal');
+    if (!modalEl) return;
+    const modal = new bootstrap.Modal(modalEl);
+    const modalSubjectName = document.getElementById('modalSubjectName');
+    const questionCount = document.getElementById('questionCount');
+    let selectedSubject = null;
+
+    document.querySelectorAll('.subject-card').forEach(function(link) {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            selectedSubject = this.getAttribute('data-subject');
+            if (!selectedSubject) return;
+            modalSubjectName.textContent = selectedSubject;
+            modal.show();
+        });
+    });
+
+    const startBtn = document.getElementById('startQuizBtn');
+    if (startBtn) {
+        startBtn.addEventListener('click', function() {
+            if (!selectedSubject) return;
+            const count = questionCount ? questionCount.value : '10';
+            const url = '/quiz/' + encodeURIComponent(semester) + '/' + encodeURIComponent(selectedSubject) + '?count=' + count;
+            window.location.href = url;
+        });
+    }
+});
+</script>
+{% endblock %}

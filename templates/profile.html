@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="page-hero fade-in">
+    <div class="eyebrow">Student Profile</div>
+    <h2>{{ user[1] }}</h2>
+    <p class="lead-copy mb-0">Switch between profile details and quiz history from the options below.</p>
+</section>
+
+<div class="profile-switcher fade-in">
+    <button class="profile-tab is-active" type="button" data-target="detailsPanel">Student Details</button>
+    <button class="profile-tab" type="button" data-target="historyPanel">Quiz History</button>
+</div>
+
+<div id="detailsPanel" class="profile-panel fade-in">
+    <div class="row g-4">
+        <div class="col-lg-5">
+            <div class="card section-card">
+                <div class="profile-avatar">{{ user[1][0] if user[1] else 'S' }}</div>
+                <h4 class="section-title">Profile Details</h4>
+                <p class="mb-3"><strong>Name</strong><br>{{ user[1] }}</p>
+                <p class="mb-3"><strong>KTU ID</strong><br>{{ user[2] }}</p>
+                <p class="mb-3"><strong>Roll No</strong><br>{{ user[3] }}</p>
+                <p class="mb-0"><strong>Department</strong><br>{{ user[4] }}</p>
+            </div>
+        </div>
+        <div class="col-lg-7">
+            <div class="card section-card">
+                <h4 class="section-title">Quick Actions</h4>
+                <p class="text-muted">Use the top-right menu for navigation, or continue from here.</p>
+                <div class="d-flex gap-2 flex-wrap">
+                    <a class="btn btn-primary" href="{{ url_for('dashboard') }}">Open Dashboard</a>
+                    <a class="btn btn-outline-secondary" href="{{ url_for('logout') }}">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="historyPanel" class="profile-panel d-none fade-in">
+    <div class="card section-card">
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2 mb-3">
+            <div>
+                <h4 class="section-title mb-1">Quiz History</h4>
+                <p class="text-muted mb-0">Recent attempts, scores, and accuracy at a glance.</p>
+            </div>
+            <div class="badge-soft">{{ history|length }} attempt{{ '' if history|length == 1 else 's' }}</div>
+        </div>
+        {% if history %}
+        <div class="table-responsive">
+            <table class="table table-hover align-middle history-table mb-0">
+                <thead>
+                    <tr>
+                        <th>Date and Time</th>
+                        <th>Semester</th>
+                        <th>Subject</th>
+                        <th>Module</th>
+                        <th class="text-center">Score</th>
+                        <th class="text-center">Correct</th>
+                        <th class="text-center">Percent</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for row in history %}
+                    <tr>
+                        <td>{{ (row[7][:10] ~ ' ' ~ row[7][11:16]) if row[7] and row[7]|length >= 16 else (row[7] or '-') }}</td>
+                        <td>{{ row[0] }}</td>
+                        <td>{{ row[1] }}</td>
+                        <td>{{ row[2] or '-' }}</td>
+                        <td class="text-center">{{ row[3]|int }} / {{ row[4]|int }}</td>
+                        <td class="text-center">{{ row[5] }} / {{ row[6] }}</td>
+                        <td class="text-center">{{ ((row[3] / row[4]) * 100)|round(1) if row[4] else 0 }}%</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        {% else %}
+        <p class="text-muted mb-0">No quizzes taken yet. <a href="{{ url_for('dashboard') }}">Start a quiz</a> from the dashboard.</p>
+        {% endif %}
+    </div>
+</div>
+
+<script>
+document.querySelectorAll('.profile-tab').forEach(function(button) {
+    button.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-target');
+        document.querySelectorAll('.profile-tab').forEach(function(tab) {
+            tab.classList.remove('is-active');
+        });
+        document.querySelectorAll('.profile-panel').forEach(function(panel) {
+            panel.classList.add('d-none');
+        });
+        this.classList.add('is-active');
+        document.getElementById(targetId).classList.remove('d-none');
+    });
+});
+</script>
+{% endblock %}
